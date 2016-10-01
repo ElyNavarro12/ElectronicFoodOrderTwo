@@ -1,0 +1,49 @@
+- Ordenar
+- Dividir ordenes
+- Menu
+- Facturación
+
+// Base de Datos //
+
+// Vista del cliente //
+
+Modelo "De empleados"
+
+Modelo "Menu"
+  Modelo "Categorias"
+    Modelo "Bebidas" -> Calificación
+    Modelo "Platillos" -> Calificación
+      Modelo "Ingredientes"
+
+Modelo "Promociones"
+
+Modelo "Clientes"
+  Modelo "AsientosDisponibles"
+    Modelo "Pedidos"
+
+// Vista del vendedor //
+
+Modelo "Inventario"
+  Modelo "Menu"
+
+Modelo "Pedidos"
+  Modelo "Platillos y bebidas"
+
+                                                                      ===================
+                                                                      = COSAS POR HACER =
+                                                                      ===================
+- Nombre para el proyecto
+
+SISTEMA DE ORDEN DEL LADO DEL VENDEDOR
+- Niveles de usuario
+- Poder inicializar, modificar, vaciar y exportar bases de datos
+- Poder ver y revisar sus clientes y sus respectivas ordenes
+- Poder crear ordenes desde el punto de ventas
+
+SISTEMA DE ORDEN DEL LADO DEL CLIENTE
+- Crear modelo de asientos disponibles y ubicaciones
+- Sistema de orden para clientes
+  - Cliente tenga un menu en su interfaz
+  - Cliente pueda seleccionar categorias de su menu
+  - Cliente pueda revisar platillos y bebidas
+  - Cliente pueda agregar alimentos a la orden
