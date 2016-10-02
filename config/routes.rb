@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-<<<<<<< HEAD
+
   get 'inicio' => 'client#index'
 
   #Rutas para poder utilizar CRUD con los modelos Menu y Category
@@ -11,13 +11,9 @@ Rails.application.routes.draw do
   resources :dishes
   resources :drinks
 
-  # You can have the root of your site routed with "root"
-  root 'home#index'
-=======
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
->>>>>>> 457cf0127ac82c223550d19eda0e5f5f9801fd2f
+  root 'menus#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

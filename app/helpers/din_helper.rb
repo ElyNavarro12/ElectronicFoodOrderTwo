@@ -1,0 +1,2 @@
+module DinHelper
+end
