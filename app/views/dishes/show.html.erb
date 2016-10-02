@@ -1,0 +1,59 @@
+<p>
+  <strong>ID:</strong>
+  <%= @dish.id %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @dish.name %>
+</p>
+
+<!-- Mostrando platillos !-->
+<div clas="list">
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @dishes.each do |dish| %>
+      <tr>
+        <td><%= dish.id %></td>
+        <td><%= dish.name %></td>
+        <td><%= link_to 'Show', dish %></td>
+        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Nuevo platillo', new_dish_path() %>
+</div>
+
+<!-- Mostrando bebidas !-->
+<div clas="list">
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @drinks.each do |drink| %>
+      <tr>
+        <td><%= drink.id %></td>
+        <td><%= drink.name %></td>
+        <td><%= link_to 'Show', drink %></td>
+        <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
+        <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Nueva bebida', new_drink_path() %>
+</div>
+
+<%= link_to 'Edit', edit_dish_path(@dish) %>
+<%= link_to 'Back', Menu.find($currentid) %>
