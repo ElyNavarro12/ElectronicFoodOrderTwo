@@ -6,14 +6,14 @@ def show
 end
 
 def new
-  @category = Menu.find($currentid).categories.new
+  @category = Menu.find($currentMenu).categories.new
 end
 
 def edit
 end
 
 def create
-  @category = Menu.find($currentid).categories.new(category_params)
+  @category = Menu.find($currentMenu).categories.new(category_params)
 
   respond_to do |format|
     if @category.save
@@ -41,7 +41,7 @@ end
 def destroy
   @category.destroy
   respond_to do |format|
-    format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
+    format.html { redirect_to menu_path(Menu.find($currentMenu)), notice: 'Category was successfully destroyed.' }
     format.json { head :no_content }
   end
 end
@@ -50,6 +50,7 @@ private
   # Use callbacks to share common setup or constraints between actions.
   def set_category
     @category = Category.find(params[:id])
+    $currentCategory = @category.id
     @dishes = @category.dishes
     @drinks = @category.drinks
   end

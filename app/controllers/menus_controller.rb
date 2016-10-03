@@ -55,7 +55,7 @@ class MenusController < ApplicationController
     def set_menu
       @menu = Menu.find(params[:id])
       @categories = @menu.categories
-      $currentid = @menu.id
+      $currentMenu = @menu.id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

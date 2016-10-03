@@ -5306,3 +5306,1121 @@ NoMethodError (undefined method `dishes' for #<Menu:0x9269298>):
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3310.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 10:45:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MenusController#index as HTML
+  [1m[35mMenu Load (0.0ms)[0m  SELECT "menus".* FROM "menus"
+  Rendered menus/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 1162ms (Views: 1078.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:06 -0500
+
+
+Started GET "/assets/din.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/dish.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/drink.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/menus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/din.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/dish.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/drink.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/drinks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/assets/menus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:45:07 -0500
+
+
+Started GET "/menus/4" for ::1 at 2016-10-03 10:45:15 -0500
+Processing by MenusController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."menu_id" = ?  [["menu_id", 4]]
+  Rendered menus/show.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 577ms (Views: 253.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 10:45:20 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mDish Load (0.0ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?  [["category_id", 4]]
+  [1m[36mDrink Load (0.0ms)[0m  [1mSELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mMenu Load (0.5ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 217ms (Views: 194.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 10:45:22 -0500
+Processing by DishesController#new as HTML
+  [1m[36mMenu Load (1.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `dishes' for #<Menu:0x8b12758>):
+  app/controllers/dishes_controller.rb:9:in `new'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1528.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1396.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3196.2ms)
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 10:50:23 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mDrink Load (1.0ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 4]]
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 247ms (Views: 211.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/din.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/drink.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/dish.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/menus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/din.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:24 -0500
+
+
+Started GET "/assets/dish.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:25 -0500
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:25 -0500
+
+
+Started GET "/assets/drink.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:25 -0500
+
+
+Started GET "/assets/drinks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:25 -0500
+
+
+Started GET "/assets/menus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:50:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-03 10:50:25 -0500
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 10:50:26 -0500
+Processing by DishesController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant DishesController::Catogory):
+  app/controllers/dishes_controller.rb:9:in `new'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1418.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1341.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3036.7ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 10:51:05 -0500
+Processing by DishesController#new as HTML
+  [1m[35mCategory Load (1.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered dishes/_form.html.erb (169.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered dishes/new.html.erb within layouts/application (202.0ms)
+Completed 200 OK in 444ms (Views: 408.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/din.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:05 -0500
+
+
+Started GET "/assets/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/dish.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/drink.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/menus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/din.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/dish.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/drink.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/drinks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/menus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-03 10:51:06 -0500
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 10:51:09 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mDrink Load (0.0ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 4]]
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 228ms (Views: 213.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 10:51:11 -0500
+Processing by DishesController#new as HTML
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered dishes/_form.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered dishes/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 200ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dishes" for ::1 at 2016-10-03 10:51:17 -0500
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRK9wFIYvb0glVBhCzR46mjRXrcMmIEZfh1iViKsmvnYs9CHUvvniI4mJ4kR+TI3Yoq38tyURNsOo0ZDIthk4w==", "dish"=>{"name"=>"Enchiladas"}, "commit"=>"Create Dish"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "dishes" ("name", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Enchiladas"], ["category_id", 4], ["created_at", "2016-10-03 15:51:17.059295"], ["updated_at", "2016-10-03 15:51:17.059295"]]
+  [1m[36m (218.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dishes/1
+Completed 302 Found in 229ms (ActiveRecord: 219.6ms)
+
+
+Started GET "/dishes/1" for ::1 at 2016-10-03 10:51:17 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (2.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.0ms)
+
+NoMethodError (undefined method `dishes' for nil:NilClass):
+  app/controllers/dishes_controller.rb:53:in `set_dish'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1438.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1314.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3051.7ms)
+
+
+Started GET "/menus" for ::1 at 2016-10-03 10:59:45 -0500
+Processing by MenusController#index as HTML
+  [1m[36mMenu Load (1.0ms)[0m  [1mSELECT "menus".* FROM "menus"[0m
+  Rendered menus/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 194ms (Views: 186.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/menus/4" for ::1 at 2016-10-03 10:59:49 -0500
+Processing by MenusController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMenu Load (0.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."menu_id" = ?[0m  [["menu_id", 4]]
+  Rendered menus/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 194ms (Views: 174.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/4/edit" for ::1 at 2016-10-03 10:59:54 -0500
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered categories/_form.html.erb (2.0ms)
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/edit.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 218ms (Views: 198.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/menus/4" for ::1 at 2016-10-03 10:59:56 -0500
+Processing by MenusController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMenu Load (1.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."menu_id" = ?[0m  [["menu_id", 4]]
+  Rendered menus/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 180ms (Views: 176.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/new" for ::1 at 2016-10-03 11:00:03 -0500
+Processing by CategoriesController#new as HTML
+  [1m[35mMenu Load (0.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered categories/_form.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 197ms (Views: 194.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for ::1 at 2016-10-03 11:00:10 -0500
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f2Z/fVyO7FnC0wrzglYLjHvo1gnZm+sl8Y1ZgzoDntQmxxI6XG22bGxgfRuYm0FRcbM/TAmXLueBM32WOndgzg==", "category"=>{"name"=>"Para tontos"}, "commit"=>"Create Category"}
+  [1m[35mMenu Load (0.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.1ms)[0m  INSERT INTO "categories" ("name", "menu_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Para tontos"], ["menu_id", 4], ["created_at", "2016-10-03 16:00:10.984734"], ["updated_at", "2016-10-03 16:00:10.984734"]]
+  [1m[36m (163.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/categories/6
+Completed 302 Found in 186ms (ActiveRecord: 171.9ms)
+
+
+Started GET "/categories/6" for ::1 at 2016-10-03 11:00:11 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35mDrink Load (0.5ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 6]]
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 189ms (Views: 186.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 11:00:15 -0500
+
+SyntaxError (C:/Users/elyna_000/Desktop/ElectronicFoodOrderTwo/app/controllers/dishes_controller.rb:53: syntax error, unexpected keyword_end, expecting ']'
+C:/Users/elyna_000/Desktop/ElectronicFoodOrderTwo/app/controllers/dishes_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/dishes_controller.rb:53: syntax error, unexpected keyword_end, expecting ']'
+  app/controllers/dishes_controller.rb:59: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1411.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1272.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2927.0ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 11:02:01 -0500
+Processing by DishesController#new as HTML
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered dishes/_form.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered dishes/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 231ms (Views: 203.7ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/dishes" for ::1 at 2016-10-03 11:02:07 -0500
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Za3iRHJa8zDVQirDNwUOyXtjaMtPqWD5fMgwapivqPQ8DI8DcrmpBXvxXSstyEQUcTiBjp+lpTsMdhR/mNtW7g==", "dish"=>{"name"=>"Chilaquiles"}, "commit"=>"Create Dish"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (19.9ms)[0m  INSERT INTO "dishes" ("name", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Chilaquiles"], ["category_id", 6], ["created_at", "2016-10-03 16:02:07.512322"], ["updated_at", "2016-10-03 16:02:07.512322"]]
+  [1m[36m (241.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dishes/2
+Completed 302 Found in 271ms (ActiveRecord: 261.3ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-10-03 11:02:07 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:       </tr>
+    18:     </thead>
+    19:     <tbody>
+    20:       <% @dishes.each do |dish| %>
+    21:       <tr>
+    22:         <td><%= dish.id %></td>
+    23:         <td><%= dish.name %></td>
+  app/views/dishes/show.html.erb:20:in `_app_views_dishes_show_html_erb___178745465_77093196'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1497.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1684.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (7370.5ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-10-03 11:04:12 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:       </tr>
+    18:     </thead>
+    19:     <tbody>
+    20:       <% @dishes.each do |dish| %>
+    21:       <tr>
+    22:         <td><%= dish.id %></td>
+    23:         <td><%= dish.name %></td>
+  app/views/dishes/show.html.erb:20:in `_app_views_dishes_show_html_erb___178745465_77093196'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1398.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1367.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3013.0ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-10-03 11:12:35 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (40.0ms)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0xae06588>:0x5674cc8>):
+    20:       <tr>
+    21:         <td><%= @dish.id %></td>
+    22:         <td><%= @dish.name %></td>
+    23:         <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+    24:         <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    25:       </tr>
+    26:     </tbody>
+  app/views/dishes/show.html.erb:23:in `_app_views_dishes_show_html_erb___178745465_45271116'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1342.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1248.8ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2885.4ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-10-03 11:13:27 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (35.0ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0xae06588>:0x9645630>):
+    21:         <td><%= @dish.id %></td>
+    22:         <td><%= @dish.name %></td>
+    23:         <td><%= link_to 'Edit', edit_dish_path(@dish) %></td>
+    24:         <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    25:       </tr>
+    26:     </tbody>
+    27:   </table>
+  app/views/dishes/show.html.erb:24:in `_app_views_dishes_show_html_erb___178745465_78783852'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1345.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1247.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2891.7ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-10-03 11:13:59 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered dishes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 188ms (Views: 186.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/din.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:13:59 -0500
+
+
+Started GET "/assets/dish.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/drink.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/menus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/din.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/dish.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/drink.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/drinks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/menus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-03 11:14:00 -0500
+
+
+Started GET "/categories/6" for ::1 at 2016-10-03 11:14:07 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (1.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mDish Load (1.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35mDrink Load (0.0ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 6]]
+  [1m[36mMenu Load (1.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 211ms (Views: 197.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/drinks/new" for ::1 at 2016-10-03 11:14:12 -0500
+Processing by DrinksController#new as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered drinks/_form.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered drinks/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 223ms (Views: 207.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/drinks" for ::1 at 2016-10-03 11:14:23 -0500
+Processing by DrinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aCsxpLjv+G8Y8uF3blsBlNEh0FKHaVjb2bOJckXgX0IxilzjuAyiWrZBlp90lktJ23o5F1dlnRmpDa1nRZShWA==", "drink"=>{"name"=>"Cerveza Corona"}, "commit"=>"Create Drink"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.5ms)[0m  INSERT INTO "drinks" ("name", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cerveza Corona"], ["category_id", 6], ["created_at", "2016-10-03 16:14:23.457391"], ["updated_at", "2016-10-03 16:14:23.457391"]]
+  [1m[36m (186.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/drinks/1
+Completed 302 Found in 205ms (ActiveRecord: 197.4ms)
+
+
+Started GET "/drinks/1" for ::1 at 2016-10-03 11:14:23 -0500
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDrink Load (1.0ms)[0m  SELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered drinks/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 208ms (Views: 203.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/drinks/1" for ::1 at 2016-10-03 11:14:40 -0500
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDrink Load (0.0ms)[0m  SELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered drinks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 191ms (Views: 188.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dish.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/din.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/drink.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/drinks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/menus.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/din.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/dish.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/drink.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/drinks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/menus.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-03 11:14:41 -0500
+
+
+Started GET "/categories/6" for ::1 at 2016-10-03 11:14:43 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (1.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mDish Load (1.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 6]]
+  [1m[35mDrink Load (0.0ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 6]]
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 198ms (Views: 194.7ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/dishes/2" for ::1 at 2016-10-03 11:14:47 -0500
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/gc3eznx1BTmxXolZUujUy45fsbKtYJ7lEojSzyI2+Gnplo8ORKOIUh2Dc1/humOJGKXgxq5R7nk9AdePPwl+w==", "id"=>"2"}
+  [1m[35mDish Load (1.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "dishes" WHERE "dishes"."id" = ?  [["id", 2]]
+  [1m[36m (367.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 375ms (ActiveRecord: 369.5ms)
+
+
+Started GET "/dishes" for ::1 at 2016-10-03 11:14:47 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for DishesController):
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1271.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2941.9ms)
+
+
+Started DELETE "/dishes/2" for ::1 at 2016-10-03 11:18:52 -0500
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/gc3eznx1BTmxXolZUujUy45fsbKtYJ7lEojSzyI2+Gnplo8ORKOIUh2Dc1/humOJGKXgxq5R7nk9AdePPwl+w==", "id"=>"2"}
+  [1m[35mDish Load (0.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 12ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Dish with 'id'=2):
+  app/controllers/dishes_controller.rb:52:in `set_dish'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1386.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1396.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3072.3ms)
+
+
+Started GET "/menus" for ::1 at 2016-10-03 11:19:14 -0500
+Processing by MenusController#index as HTML
+  [1m[36mMenu Load (1.0ms)[0m  [1mSELECT "menus".* FROM "menus"[0m
+  Rendered menus/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 191ms (Views: 182.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/menus/4" for ::1 at 2016-10-03 11:19:17 -0500
+Processing by MenusController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMenu Load (0.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."menu_id" = ?[0m  [["menu_id", 4]]
+  Rendered menus/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 197ms (Views: 174.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 11:19:31 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (1.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mDish Load (1.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mDrink Load (0.0ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 4]]
+  [1m[36mMenu Load (0.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 209ms (Views: 193.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dishes/1" for ::1 at 2016-10-03 11:19:37 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered dishes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 200ms (Views: 197.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/dishes/1" for ::1 at 2016-10-03 11:19:48 -0500
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E+f1qUehzwz6CksR+d2ddG/wkm/Ygapmm5ds2Qw3e9lKRpjuR0KVOVS5PPnjENepZat7KgiNb6TrKUjMDEOFww==", "id"=>"1"}
+  [1m[35mDish Load (1.0ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "dishes" WHERE "dishes"."id" = ?  [["id", 1]]
+  [1m[36m (140.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+Redirected to http://localhost:3000/categories/4
+Completed 302 Found in 151ms (ActiveRecord: 144.3ms)
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 11:19:48 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mDish Load (1.0ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?  [["category_id", 4]]
+  [1m[36mDrink Load (0.0ms)[0m  [1mSELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mMenu Load (0.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 182ms (Views: 178.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-10-03 11:19:52 -0500
+Processing by DishesController#new as HTML
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered dishes/_form.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered dishes/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 209ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dishes" for ::1 at 2016-10-03 11:19:57 -0500
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XNAy+TzqaEwdji/gYBAf0akSHKndpd4j9uKdI0hm6PcFcV++PAkyebM9WAh63VUMo0n17A2pG+GGXLk2SBIW7Q==", "dish"=>{"name"=>"Enchiladas"}, "commit"=>"Create Dish"}
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "dishes" ("name", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Enchiladas"], ["category_id", 4], ["created_at", "2016-10-03 16:19:57.343350"], ["updated_at", "2016-10-03 16:19:57.343350"]]
+  [1m[35m (141.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/dishes/3
+Completed 302 Found in 160ms (ActiveRecord: 145.2ms)
+
+
+Started GET "/dishes/3" for ::1 at 2016-10-03 11:19:57 -0500
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered dishes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 190ms (Views: 187.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 11:20:04 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mDish Load (0.0ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?  [["category_id", 4]]
+  [1m[36mDrink Load (0.0ms)[0m  [1mSELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mMenu Load (0.0ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 178ms (Views: 174.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/dishes/3" for ::1 at 2016-10-03 11:20:18 -0500
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Hh7MTzkTxcwN+A6+3zPIkHyeA6Zdn+rl6m3gIlozIdxHv6EIOfCf+aNLeVbF/oJNdsXq442TLyea08Q3Wkffxg==", "id"=>"3"}
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (5.5ms)[0m  [1mDELETE FROM "dishes" WHERE "dishes"."id" = ?[0m  [["id", 3]]
+  [1m[35m (108.7ms)[0m  commit transaction
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to http://localhost:3000/categories/4
+Completed 302 Found in 125ms (ActiveRecord: 114.2ms)
+
+
+Started GET "/categories/4" for ::1 at 2016-10-03 11:20:18 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mDish Load (0.0ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."category_id" = ?[0m  [["category_id", 4]]
+  [1m[35mDrink Load (0.0ms)[0m  SELECT "drinks".* FROM "drinks" WHERE "drinks"."category_id" = ?  [["category_id", 4]]
+  [1m[36mMenu Load (0.5ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered categories/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 183ms (Views: 180.9ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateIngredients (20160822234023)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "ingredients"
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160822234023"]]
+  [1m[35m (134.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOrders (20160822230657)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (6.0ms)[0m  DROP TABLE "orders"
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160822230657"]]
+  [1m[35m (120.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateClients (20160822230619)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (44.6ms)[0m  DROP TABLE "clients"
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160822230619"]]
+  [1m[35m (74.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateSeats (20160822230529)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (13.5ms)[0m  DROP TABLE "seats"
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160822230529"]]
+  [1m[35m (75.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDishes (20160822230245)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (26.6ms)[0m  DROP TABLE "dishes"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160822230245"]]
+  [1m[35m (76.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDrinks (20160822230151)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (27.4ms)[0m  DROP TABLE "drinks"
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160822230151"]]
+  [1m[35m (77.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDrinks (20160822230151)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

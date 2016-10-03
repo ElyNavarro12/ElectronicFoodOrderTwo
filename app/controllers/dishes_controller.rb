@@ -6,14 +6,14 @@ class DishesController < ApplicationController
   end
 
   def new
-    @dish = Menu.find($currentid).dishes.new
+    @dish = Category.find($currentCategory).dishes.new
   end
 
   def edit
   end
 
   def create
-    @dish = Menu.find($currentid).dishes.new(dish_params)
+    @dish = Category.find($currentCategory).dishes.new(dish_params)
 
     respond_to do |format|
       if @dish.save
@@ -41,7 +41,7 @@ class DishesController < ApplicationController
   def destroy
     @dish.destroy
     respond_to do |format|
-      format.html { redirect_to dishes_url, notice: 'Dish was successfully destroyed.' }
+      format.html { redirect_to category_path(Category.find($currentCategory)), notice: 'Dish was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -50,12 +50,10 @@ class DishesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_dish
       @dish = Dish.find(params[:id])
-      @dishes = @category.dishes
-      @drinks = @category.drinks
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name, :menu_id)
+      params.require(:dish).permit(:name, :category_id)
     end
 end

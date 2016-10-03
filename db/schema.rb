@@ -11,39 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160822234023) do
+ActiveRecord::Schema.define(version: 20160822230120) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.integer  "menu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "clients", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dishes", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.decimal  "price"
-    t.integer  "category_id"
-    t.integer  "order_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "drinks", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.decimal  "price"
-    t.integer  "category_id"
-    t.integer  "order_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "employees", force: :cascade do |t|
@@ -55,32 +29,10 @@ ActiveRecord::Schema.define(version: 20160822234023) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ingredients", force: :cascade do |t|
-    t.integer  "drink_id"
-    t.integer  "dish_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "menus", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer  "client_id"
-    t.decimal  "total"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "seats", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "employee_id"
-    t.integer  "client_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -101,8 +53,5 @@ ActiveRecord::Schema.define(version: 20160822234023) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-=======
-ActiveRecord::Schema.define(version: 0) do
->>>>>>> 457cf0127ac82c223550d19eda0e5f5f9801fd2f
 
 end
