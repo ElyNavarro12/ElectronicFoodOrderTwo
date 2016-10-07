@@ -1,5 +1,7 @@
 class Order < ActiveRecord::Base
 
-  belongs_to :client
+  has_many :foods
+
+  belongs_to :clients
 
 end

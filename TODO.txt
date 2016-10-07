@@ -47,3 +47,5 @@ SISTEMA DE ORDEN DEL LADO DEL CLIENTE
   - Cliente pueda seleccionar categorias de su menu
   - Cliente pueda revisar platillos y bebidas
   - Cliente pueda agregar alimentos a la orden
+
+  TODO Al eliminar un menu completo, poder eliminar categorias, platillos, bebidas e ingredientes por automatico

@@ -13,7 +13,15 @@
   <p class="alert"><%= alert %></p>
   <!-- Just follwing devise instructions !-->
 
-<%= yield %>
+<% if @needOfficialSession %>
+  <% if user_signed_in? %>
+    <%= yield %>
+  <% else %>
+    <%= render 'restricted' %>
+  <% end %>
+<% else %>
+  <%= yield %>
+<% end %>
 
 </body>
 </html>

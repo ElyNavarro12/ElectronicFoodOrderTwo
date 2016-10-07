@@ -1,6 +1,7 @@
 class DrinksController < ApplicationController
 
   before_action :set_drink, only: [:show, :edit, :update, :destroy]
+  before_action :set_restriction
 
   def show
   end
@@ -28,7 +29,7 @@ class DrinksController < ApplicationController
 
   def update
     respond_to do |format|
-      if @drink.update(drinks_params)
+      if @drink.update(drink_params)
         format.html { redirect_to @drink, notice: 'Drink was successfully updated.' }
         format.json { render :show, status: :ok, location: @drink }
       else
@@ -56,4 +57,10 @@ class DrinksController < ApplicationController
     def drink_params
       params.require(:drink).permit(:name, :category_id)
     end
+
+    #This method asks for a user session to see the full content
+    def set_restriction
+      @needOfficialSession = true
+    end
+
 end

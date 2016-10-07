@@ -13,7 +13,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Default server for mailer TODO La linea 17 de código modifíquenla dependiendo de su host y el puerto en el que trabajen
-  config.action_mailer.default_url_options = { host: '192.168.1.82:80' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # Configure static file server for tests with Cache-Control for performance.
   config.serve_static_files   = true

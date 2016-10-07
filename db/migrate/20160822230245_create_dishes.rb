@@ -4,8 +4,7 @@ class CreateDishes < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.decimal :price
-      t.reference :category
-      t.reference :order
+      t.references :category
 
       t.timestamps null: false
     end

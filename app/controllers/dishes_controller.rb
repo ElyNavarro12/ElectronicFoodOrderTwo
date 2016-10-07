@@ -1,6 +1,7 @@
 class DishesController < ApplicationController
 
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
+  before_action :set_restriction
 
   def show
   end
@@ -56,4 +57,10 @@ class DishesController < ApplicationController
     def dish_params
       params.require(:dish).permit(:name, :category_id)
     end
+
+    #This method asks for a user session to see the full content
+    def set_restriction
+      @needOfficialSession = true
+    end
+
 end

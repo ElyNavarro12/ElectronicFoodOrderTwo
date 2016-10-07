@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get 'inicio' => 'client#index'
-
   #Rutas para poder utilizar CRUD con los modelos Menu y Category
   resources :menus
   resources :categories
@@ -13,7 +11,7 @@ Rails.application.routes.draw do
 
 
   # You can have the root of your site routed with "root"
-  root 'menus#index'
+  root 'orders#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

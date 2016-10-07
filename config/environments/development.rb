@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Default server for mailer TODO La linea 17 de código modifíquenla dependiendo de su host y el puerto en el que trabajen
-  config.action_mailer.default_url_options = { host: '192.168.1.82:80' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
         address: "smtp.gmail.com",

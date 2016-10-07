@@ -1,6 +1,7 @@
 class MenusController < ApplicationController
 
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
+  before_action :set_restriction
 
   def index
     @menus = Menu.all
@@ -61,6 +62,11 @@ class MenusController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
       params.require(:menu).permit(:name)
+    end
+
+    #This method asks for a user session to see the full content
+    def set_restriction
+      @needOfficialSession = true
     end
 
 end
