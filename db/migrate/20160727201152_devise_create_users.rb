@@ -2,9 +2,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
 
-      # Extra, by the developers of the current site
-      t.string :name, null: false, default: ""
-
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -15,6 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## Rememberable
       t.datetime :remember_created_at
+      t.string :name #userName
 
       ## Trackable
       t.integer  :sign_in_count, default: 0, null: false

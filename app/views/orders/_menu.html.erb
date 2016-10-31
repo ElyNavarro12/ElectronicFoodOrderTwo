@@ -1,0 +1,28 @@
+<section class="menu">
+
+  <!-- Itermaos toodas las getegorias y platillos que hay dentoro de nuestra variable @menu !-->
+  <% @menu.categories.each do |category| %>
+  <div class="baseBox category" id="category_<%= "#{category.id}" %>">
+    <h3><%= category.name %></h3>
+  </div>
+
+  <div class="baseBox categories hidden" id="<%= "#{category.id}" %>">
+
+    <% category.dishes.each do |dish| %>
+    <div class="dish">
+      <h4><%= dish.name %></h4>
+      <p><%= dish.price %></p>
+    </div>
+    <% end %>
+
+    <% category.drinks.each do |drink| %>
+    <div class="drink">
+      <h4><%= drink.name %></h4>
+      <p><%= drink.price %></p>
+    </div>
+    <% end %>
+
+  </div>
+
+  <% end %>
+</section>

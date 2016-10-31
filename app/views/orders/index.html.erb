@@ -1,5 +1,15 @@
-<section clas="salePoint">
-  <div class="">
-    <h1>Este es el pinche inicio bitches 8| </h1>
-  </div>
-</section>
+<%= render 'header' %>
+<div class="salePoint">
+  <!-- Zona de interaccion con la orden !-->
+  <section class="sideBar">
+    <div class="added">
+      <%# TODO: Iterate the food of the orders here %>
+      <%# TODO: Remove food,  %>
+    </div>
+    <div class="orderTools">
+      <%# TODO: Select quantity, pay, see customer%>
+    </div>
+  </section>
+  <%= render 'tracker' %>
+  <%= render 'menu' %>
+</div>

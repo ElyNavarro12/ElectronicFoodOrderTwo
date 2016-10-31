@@ -1,0 +1,27 @@
+<!-- Encabezado para punto de ventas solo para sesiones administrativas !-->
+<% if user_signed_in? %>
+
+<header class="baseBox">
+  <!-- Titulo !-->
+  <div class="title baseBox">
+    <span class="icon-pacman baseBox"></span>
+    <h1>NoAppName</h1>
+  </div>
+  <!-- Opciones de navegacion !-->
+  <div class="navBar baseBox">
+    <!-- Configuraciones !-->
+    <div class="config">
+      <%= link_to 'config', '/config' %>
+    </div>
+    <!-- Cerrar sesion actual !-->
+    <div class="sign_out baseBox">
+      <span class="icon-user"></span>
+      <%= link_to current_user.name, destroy_user_session_path, method: :delete  %>
+    </div>
+  </div>
+</header>
+
+<!-- Encabezado para la aplicacion de los clientes !-->
+<% else %>
+
+<% end %>

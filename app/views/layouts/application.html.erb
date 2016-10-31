@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>ElectronicFoodOrder</title>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet"> 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,15 +14,7 @@
   <p class="alert"><%= alert %></p>
   <!-- Just follwing devise instructions !-->
 
-<% if @needOfficialSession %>
-  <% if user_signed_in? %>
-    <%= yield %>
-  <% else %>
-    <%= render 'restricted' %>
-  <% end %>
-<% else %>
   <%= yield %>
-<% end %>
 
 </body>
 </html>

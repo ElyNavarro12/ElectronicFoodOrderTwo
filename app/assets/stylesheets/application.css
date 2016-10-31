@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-decoration: none;
+}
+
+body{
+  background-color: #fafafa;
+}
+
+.baseBox{
+  display: flex;
+}
+
+.hidden{
+  display: none;
+}

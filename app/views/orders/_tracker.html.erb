@@ -1,0 +1,27 @@
+<% menu_tree = ["Menu", "Prueba"] %>
+
+<!-- Order selection !-->
+<section class="orderSelection baseBox">
+  <div class="selectOrder baseBox">
+    <p class="id">1</p>
+    <p class="time">12:41</p>
+  </div>
+  <div class="selectOrder icon-plus" id="add">
+  </div>
+  <div class="selectOrder icon-minus" id="delete">
+  </div>
+</section>
+
+<%# Seguimiento de categorias dentro del menu #%>
+<section class="tracker">
+  <ul>
+    <% menu_tree.each do |branch| %>
+      <% if branch == "Menu"%>
+        <h1 class="icon-home3"></h1>
+        <li><%= branch %></li>
+      <% else %>
+        <li><%= branch %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</section>
