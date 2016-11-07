@@ -2,64 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/****************************
-*         Encabezado        *
-****************************/
-
-header{
-  position: fixed;
-  width: 100%;
-  height: 7%;
-  color: white;
-  background-color: #2e2d2d;
-  z-index: 9;
-}
-
-/*  Titulo  */
-header .title{
-  margin-left: 1%;
-  padding-top: 6%;
-  font-size: 16px;
-}
-
-header .title .icon{
-  padding-top: 16%;
-  margin-right: 4%;
-  font-size: 26px;
-}
-
-header .navBar{
-  position: absolute;
-  height: 100%;
-  right: 2.4%;
-}
-
-header .navigation{
-  padding-top: 24%;
-  padding-left: 6%;
-  padding-right: 8%;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-header .sign_out{
-  border-left: 2px solid #262525 ;
-  border-right: 2px solid #262525 ;
-  padding-left: 6%;
-  padding-right: 9%;
-  padding-top: 28%;
-  cursor: pointer;
-}
-
-header .sign_out .icon{
-  margin-top: 5%;
-  margin-right: 5%;
-}
-
-header a{
-  color: white;
-}
-
 /********************************************
 *                 Tracker                   *
 ********************************************/
@@ -86,6 +28,7 @@ header a{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: #fafafa;
+  cursor: pointer;
 }
 
 .selectOrder .id{
@@ -114,8 +57,8 @@ header a{
 /* Seguimiento de categorias */
 
 .tracker{
-  background-color: rgb(237, 237, 237);
-  color: rgb(121, 121, 121);
+  background-color: #ededed;
+  color: #797979;
   font-size: 14px;
   font-weight: 600;
   position: fixed;
@@ -136,8 +79,9 @@ header a{
   padding-left: 1%;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
-  border-right: solid 1px rgb(222, 222, 222);
+  border-right: solid 1px #dedede;
   display: inline-block;
+  cursor: pointer;
 }
 
 /*********************************
@@ -155,25 +99,142 @@ header a{
 
 .sideBar{
   width: 30%;
-  height: 100%;
-  left: 0px;
+  height: 93%;
   position: fixed;
   border-right: 2px solid #2e2d2d;
   background-color: white;
 }
 
 .added{
-  height: 70%;
+  height: 65%;
 }
 
 .orderTools{
-  height: 30%;
+  position: fixed;
+  background-color: #ededed;
+  border-top: 2px solid #26f6b1;
+  height: 35%;
+  width: 30%;
+  top: 65%;
+}
+
+.keyboard{
+  transition:All 300ms ease;
+  -webkit-transition:All 300ms ease;
+  -moz-transition:All 300ms ease;
+  -o-transition:All 300ms ease;
+  color: #545454;
+  margin: 2%;
+  height: 90%;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+}
+
+.keyboard .pay:hover, .keyboard .numeric tr th:hover{
+  transition:All 300ms ease;
+  -webkit-transition:All 300ms ease;
+  -moz-transition:All 300ms ease;
+  -o-transition:All 300ms ease;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+/*  Pagar  */
+.pay{
+  border-right: 1px solid #dedede;
+  width: 40%;
+}
+
+.pay .content{
+  width: 100%;
+  margin-top: 44%;
+  text-align: center;
+}
+.pay span{
+  padding: 10%;
+  color: #dedede;
+  font-size: 30px;
+  background-color: #545454;
+  border-radius: 50%;
+}
+.pay h4{
+  margin-top: 10%;
+}
+
+/*  Tecaldo numerico  */
+.numeric{
+  width: 60%;
+  height: 100%;
+}
+
+.numeric tr th{
+  width: 14%;
+  margin: 0px;
+  border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+.numeric .db{
+  border-bottom: none;
+}
+
+.numeric .dr{
+  border-right: none;
+}
+
+/* Function selection*/
+.keyboard .selected{
+  transition:All 300ms ease;
+  -webkit-transition:All 300ms ease;
+  -moz-transition:All 300ms ease;
+  -o-transition:All 300ms ease;
+  background-color: #26f6b1;
 }
 
 /* Menu */
 
 .menu{
-  padding-top: 3.5%;
   width: 70%;
-  margin-left: 30%;
+  height: 86%;
+  position: fixed;
+  top: 14%;
+  right: 0%;
+}
+
+.categories, .food{
+  margin-top: 1%;
+}
+
+.categories .category, .food .drink, .food .dish{
+  width: 20%;
+  margin-left: 2%;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid #ededed 1px;
+  border-bottom: solid #ededed 2px;
+  cursor: pointer;
+}
+
+.menu h3, .menu h4{
+  font-weight: lighter;
+  font-size: 16px;
+  color: #545454;
+  margin-left: 4%;
+  margin-right: 30%;
+}
+
+.food p{
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #fff;
+  background-color: #28c893;
+  border-radius: 2px;
+}
+
+.menu .photo{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 3%;
 }

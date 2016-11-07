@@ -1,7 +1,7 @@
 class DrinksController < ApplicationController
 
   before_action :set_drink, only: [:show, :edit, :update, :destroy]
-  before_action :set_restriction
+  before_action :authenticate_user!
 
   def show
   end
@@ -55,12 +55,7 @@ class DrinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def drink_params
-      params.require(:drink).permit(:name, :category_id)
-    end
-
-    #This method asks for a user session to see the full content
-    def set_restriction
-      @needOfficialSession = true
+      params.require(:drink).permit(:name, :price, :description, :photo, :category_id)
     end
 
 end

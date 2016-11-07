@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  before_action :set_restriction
+  before_action :authenticate_user!
 
   def show
   end
@@ -63,12 +63,7 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:name, :menu_id)
-    end
-
-    #This method asks for a user session to see the full content
-    def set_restriction
-      @needOfficialSession = true
+      params.require(:category).permit(:name, :photo, :menu_id)
     end
 
 end

@@ -1,1 +1,1 @@
-json.extract! @category, :id, :name, :dishes, :drinks, :created_at, :updated_at
+json.extract! @category, :id, :name, :photo, :dishes, :drinks, :created_at, :updated_at

@@ -24,6 +24,10 @@ Rails.application.configure do
         user_name: "nutriadevelopers@gmail.com",
         password: "9465517Op"
   }
+
+  #Giving Paperclip acces to ImageMagick
+  Paperclip.options[:command_path] = "/usr/bin/"
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

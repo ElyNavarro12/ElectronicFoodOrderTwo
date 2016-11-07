@@ -1,28 +1,41 @@
 <section class="menu">
 
   <!-- Itermaos toodas las getegorias y platillos que hay dentoro de nuestra variable @menu !-->
+  <div class="baseBox categories">
   <% @menu.categories.each do |category| %>
-  <div class="baseBox category" id="category_<%= "#{category.id}" %>">
-    <h3><%= category.name %></h3>
+
+    <div class="category" id="category_<%= "#{category.id}" %>">
+      <%= image_tag category.photo.url(:medium), :class => "photo" %>
+      <h3><%= category.name %></h3>
+    </div>
+
+  <% end %>
   </div>
 
-  <div class="baseBox categories hidden" id="<%= "#{category.id}" %>">
+  <% @menu.categories.each do |category| %>
+  <div class="baseBox food hidden" id="<%= "#{category.id}" %>">
 
     <% category.dishes.each do |dish| %>
     <div class="dish">
-      <h4><%= dish.name %></h4>
-      <p><%= dish.price %></p>
+      <%= image_tag dish.photo.url(:medium), :class => "photo" %>
+      <div class="baseBox">
+        <h4><%= dish.name %></h4>
+        <p>$<%= dish.price %></p>
+      </div>
     </div>
     <% end %>
 
     <% category.drinks.each do |drink| %>
     <div class="drink">
-      <h4><%= drink.name %></h4>
-      <p><%= drink.price %></p>
+      <%= image_tag drink.photo.url(:medium), :class => "photo" %>
+      <div class="baseBox">
+        <h4><%= drink.name %></h4>
+        <p>$<%= drink.price %></p>
+      </div>
     </div>
     <% end %>
 
   </div>
-
   <% end %>
+
 </section>

@@ -1,7 +1,7 @@
 class DishesController < ApplicationController
 
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
-  before_action :set_restriction
+  before_action :authenticate_user!
 
   def show
   end
@@ -29,7 +29,7 @@ class DishesController < ApplicationController
 
   def update
     respond_to do |format|
-      if @dish.update(dishes_params)
+      if @dish.update(dish_params)
         format.html { redirect_to @dish, notice: 'Dish was successfully updated.' }
         format.json { render :show, status: :ok, location: @dish }
       else
@@ -55,12 +55,7 @@ class DishesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name, :category_id)
-    end
-
-    #This method asks for a user session to see the full content
-    def set_restriction
-      @needOfficialSession = true
+      params.require(:dish).permit(:name, :price, :description, :photo, :category_id)
     end
 
 end

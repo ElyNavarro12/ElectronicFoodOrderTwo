@@ -1,15 +1,9 @@
 <%= render 'header' %>
-<div class="salePoint">
+<div class="salePoint baseBox">
   <!-- Zona de interaccion con la orden !-->
-  <section class="sideBar">
-    <div class="added">
-      <%# TODO: Iterate the food of the orders here %>
-      <%# TODO: Remove food,  %>
-    </div>
-    <div class="orderTools">
-      <%# TODO: Select quantity, pay, see customer%>
-    </div>
-  </section>
+  <%= render 'orderDisplay' %>
+  <!-- Seguimiento de ordenes y moviemiento entre categorias !-->
   <%= render 'tracker' %>
+  <!-- Mostramos el menu !-->
   <%= render 'menu' %>
 </div>

@@ -1,3 +1,4 @@
+<%= render '/orders/header' %>
 <p>
   <strong>ID:</strong>
   <%= @category.id %>
@@ -14,6 +15,7 @@
       <tr>
         <td>ID</td>
         <td>Name</td>
+        <td>Precio</td>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +23,8 @@
       <tr>
         <td><%= dish.id %></td>
         <td><%= dish.name %></td>
+        <td>$<%= dish.price%></td>
+        <td><%= image_tag dish.photo.url(:thumb) %></td>
         <td><%= link_to 'Show', dish %></td>
         <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
         <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,6 +42,7 @@
       <tr>
         <td>ID</td>
         <td>Name</td>
+        <td>Precio</td>
       </tr>
     </thead>
     <tbody>
@@ -45,6 +50,8 @@
       <tr>
         <td><%= drink.id %></td>
         <td><%= drink.name %></td>
+        <td>$<%= drink.price%></td>
+        <td><%= image_tag drink.photo.url(:thumb) %></td>
         <td><%= link_to 'Show', drink %></td>
         <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
         <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
