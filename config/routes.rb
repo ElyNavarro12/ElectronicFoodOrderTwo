@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   resources :categories
   resources :dishes
   resources :drinks
+  resources :orders
 
 
   # You can have the root of your site routed with "root"
-  root 'orders#index'
+  root 'sales#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

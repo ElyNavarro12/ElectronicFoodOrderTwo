@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>ElectronicFoodOrder</title>
-  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,9 +10,13 @@
 <body>
 
   <!-- Just follwing devise instructions !-->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <!-- Just follwing devise instructions !-->
+  <div class="notice alertBox">
+    <span class="icon-cross" id="closeAlertBox"></span>
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="alert alertBox">
+    <p id="alert"><%= alert %></p>
+  </div>
 
   <%= yield %>
 

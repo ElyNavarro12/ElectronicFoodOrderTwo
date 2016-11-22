@@ -65,8 +65,12 @@ ActiveRecord::Schema.define(version: 20161106202338) do
   end
 
   create_table "foods", force: :cascade do |t|
-    t.string   "type"
     t.integer  "identifier"
+    t.string   "type"
+    t.string   "name"
+    t.integer  "quantity"
+    t.decimal  "price"
+    t.decimal  "total"
     t.integer  "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
