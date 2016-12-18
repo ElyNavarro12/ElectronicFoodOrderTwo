@@ -15,7 +15,7 @@
       <p class="time"><%= "#{order.created_at.localtime.strftime("%I:%M")}" %></p>
     </div>
     <% else %>
-    <div class="selectOrder baseBox selected" id="order_<%= "#{order.id}" %>">
+    <div class="selectOrder baseBox" id="order_<%= "#{order.id}" %>">
       <p class="id"><%= "#{order.id}" %></p>
     </div>
     <% end %>

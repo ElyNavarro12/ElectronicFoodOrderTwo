@@ -1,3 +1,325 @@
 // Place all the styles related to the sales controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/********************************************
+*                 Tracker                   *
+********************************************/
+
+/* Add/Edit/Select Orders */
+
+.orderSelection{
+  left: 30.15%;
+  width: 40%;
+  height: 7%;
+  position: fixed;
+  top: 0%;
+  z-index: 10;
+}
+
+.orderSelectionScroll{
+  overflow-x: auto;
+  width: 30%;
+}
+
+.selectOrder{
+  padding-right: 4%;
+  padding-left: 4%;
+  padding-top: 3%;
+  margin-right: 1%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #adadad;
+  cursor: pointer;
+}
+
+.currentOrder{
+  padding-right: 3%;
+  padding-left: 3%;
+  font-weight: bold;
+  background-color: #fafafa
+}
+
+.selectOrder .id{
+  font-weight: bold;
+  color: black;
+}
+
+.selectOrder .time{
+  margin-left: 25%;
+  margin-top: 10%;
+  color: black;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#add, #delete{
+  color: #b9b5b5;
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: 16px;
+  background-color: rgba(129, 129, 129, 0.35);
+  color: rgba(185, 181, 181, 0.7);
+}
+
+/* Seguimiento de categorias */
+
+.tracker{
+  background-color: #ededed;
+  color: #797979;
+  font-size: 14px;
+  font-weight: 600;
+  position: fixed;
+  width: 70%;
+  top: 7%;
+  left: 30.15%;
+}
+
+.tracker ul h1{
+  float: left;
+  margin-top: 1%;
+  padding-left: 1.2%;
+  font-size: 20px;
+}
+
+.tracker ul li {
+  padding-right: 2%;
+  padding-left: 1%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  border-right: solid 1px #dedede;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*********************************
+*   Cuerpo del punto de ventas   *
+*********************************/
+
+.salePoint{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Zona de interaccion con la orden */
+
+.sideBar{
+  width: 30%;
+  height: 93%;
+  top: 7%;
+  position: fixed;
+  border-right: 2px solid #2e2d2d;
+  background-color: white;
+}
+
+/*  Comida de la orden  */
+
+.added{
+  height: 65%;
+}
+
+/*  Comida de la orden  */
+.food-in-order{
+  background: #d6d6d6;
+  margin-top: 2%;
+  color: #474747
+}
+
+.food-in-order{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.food-in-order .info{
+  margin-left: 4%;
+  margin-top: 1%;
+}
+
+.food-in-order h3{
+  margin-left: 4%;
+  margin-right: 40%;
+}
+
+.food-in-order h3, .food-in-order h4{
+  font-size: 16px;
+}
+
+.food-in-order p{
+  font-size: 14px;
+}
+
+.food-in-order .price, .food-in-order .qty{
+  margin-left: 3%;
+}
+
+.total{
+  float: right;
+  color: #474747;
+  margin-top: 4%;
+  margin-right: 6%;
+  margin-left: 6%;
+}
+
+.total h5{
+  text-align: center;
+  font-size: 1.4em;
+  border-top: solid 2px #474747;
+}
+
+/*  Para ordenes vacias  */
+.empty{
+  text-align: center;
+  color: #9d9d9d;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 30%;
+}
+
+.empty span{
+  font-size: 4em;
+}
+
+/*  Teclado  */
+
+.orderTools{
+  position: fixed;
+  background-color: #ededed;
+  border-top: 2px solid #26f6b1;
+  height: 35%;
+  width: 30%;
+  top: 65%;
+}
+
+.keyboard{
+  transition:All 300ms ease;
+  -webkit-transition:All 300ms ease;
+  -moz-transition:All 300ms ease;
+  -o-transition:All 300ms ease;
+  color: #545454;
+  margin: 2%;
+  height: 90%;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+}
+
+.keyboard .pay:hover, .keyboard .numeric tr th:hover{
+  transition:All 300ms ease;
+  -webkit-transition:All 300ms ease;
+  -moz-transition:All 300ms ease;
+  -o-transition:All 300ms ease;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+/*  Pagar  */
+.pay{
+  border-right: 1px solid #dedede;
+  width: 40%;
+}
+
+.pay .content{
+  width: 100%;
+  margin-top: 44%;
+  text-align: center;
+}
+.pay span{
+  padding: 10%;
+  color: #dedede;
+  font-size: 30px;
+  background-color: #545454;
+  border-radius: 50%;
+}
+.pay h4{
+  margin-top: 10%;
+}
+
+/*  Tecaldo numerico  */
+.numeric{
+  width: 60%;
+  height: 100%;
+}
+
+.numeric tr th{
+  width: 14%;
+  margin: 0px;
+  border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+
+.numeric .db{
+  border-bottom: none;
+}
+
+.numeric .dr{
+  border-right: none;
+}
+
+/* Function selection*/
+.keyboard .selected{
+  transition:All 300ms ease;
+  -webkit-transition:All 300ms ease;
+  -moz-transition:All 300ms ease;
+  -o-transition:All 300ms ease;
+  background-color: #26f6b1;
+}
+
+/* Menu */
+
+.menu{
+  width: 70%;
+  height: 86%;
+  position: fixed;
+  top: 14%;
+  right: 0%;
+}
+
+.categories{
+  margin-top: 1%;
+}
+
+.categories .category, .food .drink, .food .dish{
+  width: 20%;
+  margin-left: 2%;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid #ededed 1px;
+  border-bottom: solid #ededed 2px;
+  cursor: pointer;
+}
+
+.menu h3, .menu h4{
+  font-weight: lighter;
+  font-size: 16px;
+  color: #545454;
+  margin-left: 4%;
+}
+
+.menu h5{
+  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-right: 85%;
+  margin-left: 4%;
+  color: #545454;
+  border-bottom: 2px solid #545454;
+  border-radius: 4px;
+  font-size: 1.4em;
+}
+
+.food p{
+  float: right;
+  margin-right: 1%;
+  padding-right: 3%;
+  padding-left: 3%;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #fff;
+  background-color: #28c893;
+  border-radius: 2px;
+}
+
+.menu .photo{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 3%;
+}

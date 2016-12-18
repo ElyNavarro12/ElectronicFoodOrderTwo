@@ -11,13 +11,6 @@
 
 <% @menu = Menu.where(isDefault: true).first %>
 
-$.ajax({
-  type: 'GET',
-  url: 'orders',
-  dataType: 'json',
-  success: function(result, status){}
-});
-
 $(window).ready(function(){
 
   moveThroughMenu();
@@ -68,25 +61,22 @@ function createOrder(){
     });
 
     //Actualizamos la vista de nuestras ordenes
-    $('.time').remove()
+    $('.time').remove();
     $('.currentOrder').removeClass('currentOrder');
 
     //Actualizamos nuestra variable de ordenes
-    $.ajax({
-      type: 'GET',
-      url: 'orders',
-      dataType: 'json',
-      success: function(result, status){
-        //Mostramos la nueva orden en pantalla y la marcamos como seleccionada
-        last = result.length - 1;
-        $('.orderSelection').append('<div class="selectOrder baseBox currentOrder '+ result[last].id +'" id="order_'+ result[last].id +'<p class="id">'+ result[last].id +'</p><p class="time">'+ String(result[last].id.created_at) +'</p></div>');
-      }
-    });
+    fastGet(function(result, status){
+      //Mostramos la nueva orden en pantalla y la marcamos como seleccionada
+      last = result.length - 1;
+      $('.orderSelection').append(
+        '<div class="selectOrder baseBox currentOrder" id="order_'+result[last].id+'">'
+          +'<p class="id">'+ result[last].id +'</p><p class="time">'+ result[last].created_at.slice(11, 16) +'</p>'
+        +'</div>'
+      );
+    });//fastGet
 
-    //Reecalculamos la id actual
-    currentOrder = $('.currentOrder .id').text();
-  });
-}
+  });//click
+}//createOrder
 
 //Logica para eliminar ordenes
 function deleteOrder(){
@@ -96,7 +86,7 @@ function deleteOrder(){
 
     //Removemos la informacion de la orden actual que se esta mostrando
     $('.time').remove();
-    $('.currentOrder').removeClass('currentOrder')
+    $('.currentOrder').removeClass('currentOrder');
     $('#order_'+currentOrder).remove();
 
     //Eliminamos la orden que actualmente esta seleccionada
@@ -106,20 +96,13 @@ function deleteOrder(){
       dataType: 'json',
       data: {'_method':'delete'}
     });
-    event.preventDefault();
 
     //Actualizamos nuestra variable de ordenes
     //Actualizamos la vista de la orden actual
-    $.ajax({
-      type: 'GET',
-      url: 'orders',
-      dataType: 'json',
-      success: function(result, status){
-        $('#order_'+ result[0].id).addClass('currentOrder');
-        $('.currentOrder').append('<p class="time">'+ String(result[0].id.created_at) +'</p>')
-      }
+    fastGet(function(result, status){
+      $('#order_'+ result[0].id).addClass('currentOrder');
+      $('.currentOrder').append('<p class="time">'+ result[0].created_at.slice(11, 16) +'</p>');
     });
-
     //Reecalculamos la id actual
     currentOrder = $('.currentOrder .id').text();
   });
@@ -128,24 +111,32 @@ function deleteOrder(){
 //Logica para seleccionar orden
 function selectOrder(){
 
-  //Calculamos la orden actual
-  currentOrder = $('.currentOrder .id').text();
+  //Marcamos como seleccionado la orden clickeada
+  $('.selectOrder').click(function(event){
+    clickedId = event.currentTarget.id;
+    console.log("An order has been clicked");
 
-  $.ajax({
-    type: 'GET',
-    url: 'orders',
-    dataType: 'json',
-    success: function(result, status){
-      result.forEach(function(item, index){
-        $('.order_'+item.id).click(function(){
-          $('#order_'+currentOrder).removeClass('.currentOrder')
-          $('.time').remove()
-          $('#order_'+item.id).addClass('currentOrder')
-          $('.currentOrder').append('<p class="time">'+ String(result[index].id.created_at) +'</p>')
-        })//click function
-      })//forEachfunction
-    }//succesFunction
-  });//AjaxGetMethod
+    if (clickedId.slice(0,5) == 'order') {
+      console.log("Order with id: "+clickedId+" was clicked");
+
+      //removemos la clase seleccionada
+      $('.time').remove();
+      $('.currentOrder').removeClass('currentOrder');
+
+      fastGet(function(result, status){
+
+        result.forEach(function(item, index){
+          if (item.id == clickedId.slice(6)) {
+            $('#'+clickedId).append('<p class="time">'+ result[index].created_at.slice(11, 16) +'</p>');
+            $('#'+clickedId).addClass('currentOrder');
+          }//ifIdIsSameAsClicked
+        });//eachFunction
+
+      });//fastGet
+
+    }//ifClickedId
+  });//click function
+
 
   //Calculamos la orden actual
   currentOrder = $('.currentOrder .id').text();
@@ -161,3 +152,15 @@ function addToOrder(){
 function removeFromOrder(){
 
 }
+
+/* * * * * * * * * * * * * * * * * * * * * *
+*           Helping Methods                *
+* * * * * * * * * * * * * * * * * * * * * */
+function fastGet(customFunction){
+  $.ajax({
+    type: 'GET',
+    url: 'orders',
+    dataType: 'json',
+    success: customFunction
+  })//AjaxGetMethod
+}//fastGet
