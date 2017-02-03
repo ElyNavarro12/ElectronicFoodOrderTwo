@@ -1,16 +1,18 @@
-<h2>Resend unlock instructions</h2>
-
+<%= stylesheet_link_tag "application", :media => "all" %>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<div class="container_login">
+  <%= link_to image_tag("unlock_login.ico")%>
 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label :email, class: "login_texto" %><br />
+    <%= f.email_field :email, autofocus: true,class:"form-input_login" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
+    <%= f.submit "Resend unlock instructions", class:"btn-login" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
