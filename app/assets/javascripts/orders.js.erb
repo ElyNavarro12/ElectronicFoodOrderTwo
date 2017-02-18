@@ -17,6 +17,7 @@ $(window).ready(function(){
   createOrder();
   deleteOrder();
   selectOrder();
+  addToOrder();
 
 });
 
@@ -36,7 +37,7 @@ function moveThroughMenu(){
 
       //Damos la opcion al usurio de volver atras al hacer click en cualquier categoria en el seguimiento del tracker
       $('#track').click(function(){
-        $('.food').fadeOut(50);
+        $('.foods').fadeOut(50);
         $('.categories').fadeIn();
         $('#newBranch').remove();
       });
@@ -53,34 +54,32 @@ function createOrder(){
 
   $('#add').click(function(){
     //Creamos una nueva orden en nuestra base de datos
-    $.ajax({
-      type: 'POST',
-      url: 'orders',
-      dataType: 'json',
-      data: $.param({order: {payed: false, total: 0.0}})
-    });
+    fastPost('/orders',{order: {payed: false, total: 0.0}}, function(){});
 
     //Actualizamos la vista de nuestras ordenes
     $('.time').remove();
     $('.currentOrder').removeClass('currentOrder');
 
-    //Actualizamos nuestra variable de ordenes
-    fastGet(function(result, status){
-      //Mostramos la nueva orden en pantalla y la marcamos como seleccionada
-      last = result.length - 1;
-      $('.orderSelection').append(
-        '<div class="selectOrder baseBox currentOrder" id="order_'+result[last].id+'">'
-          +'<p class="id">'+ result[last].id +'</p><p class="time">'+ result[last].created_at.slice(11, 16) +'</p>'
-        +'</div>'
-      );
-    });//fastGet
+    setTimeout(function(){
+      //Actualizamos nuestra variable de ordenes
+      fastGet('/orders', function(data, status){
+        //Mostramos la nueva orden en pantalla y la marcamos como seleccionada
+        last = data.length - 1;
+        $('.orderSelection').append(
+          '<div class="selectOrder baseBox currentOrder" id="order_'+data[last].id+'">'
+            +'<p class="id">'+ data[last].id +'</p><p class="time">'+ data[last].created_at.slice(11, 16) +'</p>'
+          +'</div>'
+        );
+
+      });//fastGet
+    },50);//setTimeout
 
   });//click
 }//createOrder
 
 //Logica para eliminar ordenes
 function deleteOrder(){
-  $('#delete').click(function(event){
+  $(document).on("click", '#delete', function(event){
     //Calculamos currentOrder
     currentOrder = $('.currentOrder .id').text();
 
@@ -90,18 +89,13 @@ function deleteOrder(){
     $('#order_'+currentOrder).remove();
 
     //Eliminamos la orden que actualmente esta seleccionada
-    $.ajax({
-      type: 'POST',
-      url: 'orders/'+ currentOrder,
-      dataType: 'json',
-      data: {'_method':'delete'}
-    });
+    fastDestroy('/orders', currentOrder, function(){});
 
     //Actualizamos nuestra variable de ordenes
     //Actualizamos la vista de la orden actual
-    fastGet(function(result, status){
-      $('#order_'+ result[0].id).addClass('currentOrder');
-      $('.currentOrder').append('<p class="time">'+ result[0].created_at.slice(11, 16) +'</p>');
+    fastGet('/orders', function(data, status){
+      $('#order_'+ data[0].id).addClass('currentOrder');
+      $('.currentOrder').append('<p class="time">'+ data[0].created_at.slice(11, 16) +'</p>');
     });
     //Reecalculamos la id actual
     currentOrder = $('.currentOrder .id').text();
@@ -112,22 +106,20 @@ function deleteOrder(){
 function selectOrder(){
 
   //Marcamos como seleccionado la orden clickeada
-  $('.selectOrder').click(function(event){
+  $(document).on("click", '.selectOrder',function(event){
     clickedId = event.currentTarget.id;
-    console.log("An order has been clicked");
 
     if (clickedId.slice(0,5) == 'order') {
-      console.log("Order with id: "+clickedId+" was clicked");
 
       //removemos la clase seleccionada
       $('.time').remove();
       $('.currentOrder').removeClass('currentOrder');
 
-      fastGet(function(result, status){
+      fastGet('/orders', function(data, status){
 
-        result.forEach(function(item, index){
+        data.forEach(function(item, index){
           if (item.id == clickedId.slice(6)) {
-            $('#'+clickedId).append('<p class="time">'+ result[index].created_at.slice(11, 16) +'</p>');
+            $('#'+clickedId).append('<p class="time">'+ data[index].created_at.slice(11, 16) +'</p>');
             $('#'+clickedId).addClass('currentOrder');
           }//ifIdIsSameAsClicked
         });//eachFunction
@@ -146,6 +138,35 @@ function selectOrder(){
 //Logica para agregr comida a las ordenes
 function addToOrder(){
 
+  //Creamos un eventListener para cualquier tipo de comida
+  $(document).on("click", '.food', function(event){
+    //Informacion requerida del evento
+    foodType = event.currentTarget.id.slice(0, event.currentTarget.id.indexOf("_"));
+    foodId = event.currentTarget.id.slice(event.currentTarget.id.indexOf("_")+1);
+    currentOrder = $('.currentOrder .id').text();
+    foodUrl = '';
+    if(foodType == 'dish'){
+      foodUrl = '/dishes';
+    }else if (foodType == 'drink') {
+      foodUrl = '/drinks';
+    }
+
+    //Buscamos
+    fastGet(foodUrl+'/'+foodId, function(data, status){
+      fastGet('/foods', function(d, s){
+        d.forEach(function(item, index){
+          if (item.identifier == foodId) {
+
+          } else if () {
+
+          }
+        });//forEach
+        fastPost('/foods', {food: {identifier: foodId, name: data.name, quantity: 1, price: data.price, total: data.price*1, order_id: currentOrder}}, function(){});//fastPost
+      });//fastGetFoods
+    });//fastGet
+
+  });
+
 }
 
 //Logica para remover comida de las ordenes
@@ -156,11 +177,31 @@ function removeFromOrder(){
 /* * * * * * * * * * * * * * * * * * * * * *
 *           Helping Methods                *
 * * * * * * * * * * * * * * * * * * * * * */
-function fastGet(customFunction){
+function fastGet(url, customFunction){
   $.ajax({
     type: 'GET',
-    url: 'orders',
+    url: url,
     dataType: 'json',
     success: customFunction
-  })//AjaxGetMethod
-}//fastGet
+  });//AjaxGetMethod
+}
+
+function fastPost(url, json, customFunction){
+  $.ajax({
+    type: 'POST',
+    url: url,
+    dataType: 'json',
+    data: $.param(json),
+    success: customFunction
+  });//AjaxPostMethod
+}
+
+function fastDestroy(url, jsonId, customFunction){
+  $.ajax({
+    type: 'POST',
+    url: url+'/'+jsonId,
+    dataType: 'json',
+    data: {'_method':'delete'},
+    success: customFunction
+  });//AjaxDestroyMethod
+}

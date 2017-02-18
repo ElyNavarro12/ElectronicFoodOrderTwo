@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :dishes
   resources :drinks
   resources :orders
+  resources :foods
 
 
   # You can have the root of your site routed with "root"

@@ -13,12 +13,12 @@
   </div>
 
   <% @menu.categories.each do |category| %>
-  <div class="baseBox food hidden" id="category_id_<%= "#{category.id}" %>">
+  <div class="baseBox foods hidden" id="category_id_<%= "#{category.id}" %>">
 
     <h5>Platillos</h5>
     <div class="baseBox">
       <% category.dishes.each do |dish| %>
-      <div class="dish" id="dish_<%= "#{dish.id}" %>">
+      <div class="dish food" id="dish_<%= "#{dish.id}" %>">
         <%= image_tag dish.photo.url(:medium), :class => "photo" %>
         <div>
           <p>$<%= dish.price %></p>
@@ -31,7 +31,7 @@
     <h5>Bebidas</h5>
     <div class="baseBox">
       <% category.drinks.each do |drink| %>
-      <div class="drink" id="drink_<%= "#{drink.id}" %>">
+      <div class="drink food" id="drink_<%= "#{drink.id}" %>">
         <%= image_tag drink.photo.url(:medium), :class => "photo" %>
         <div>
           <p>$<%= drink.price %></p>

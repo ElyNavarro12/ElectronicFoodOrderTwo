@@ -12,7 +12,7 @@
     <% if i <= 1 %>
     <div class="selectOrder baseBox currentOrder" id="order_<%= "#{order.id}" %>">
       <p class="id"><%= "#{order.id}" %></p>
-      <p class="time"><%= "#{order.created_at.localtime.strftime("%I:%M")}" %></p>
+      <p class="time"><%= "#{order.created_at.localtime.strftime("%H:%M")}" %></p>
     </div>
     <% else %>
     <div class="selectOrder baseBox" id="order_<%= "#{order.id}" %>">
