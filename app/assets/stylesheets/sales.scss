@@ -8,7 +8,7 @@
 
 /* Add/Edit/Select Orders */
 
-.orderSelection{
+.orderSelection-backend{
   left: 30.15%;
   width: 40%;
   height: 7%;
@@ -17,12 +17,12 @@
   z-index: 10;
 }
 
-.orderSelectionScroll{
+.orderSelectionScroll-backend{
   overflow-x: auto;
   width: 30%;
 }
 
-.selectOrder{
+.selectOrder-backend{
   padding-right: 4%;
   padding-left: 4%;
   padding-top: 3%;
@@ -33,19 +33,19 @@
   cursor: pointer;
 }
 
-.currentOrder{
+.currentOrder-backend{
   padding-right: 3%;
   padding-left: 3%;
   font-weight: bold;
   background-color: #fafafa
 }
 
-.selectOrder .id{
+.selectOrder-backend .id-backend{
   font-weight: bold;
   color: black;
 }
 
-.selectOrder .time{
+.selectOrder-backend .time-backend{
   margin-left: 25%;
   margin-top: 10%;
   color: black;
@@ -64,7 +64,7 @@
 
 /* Seguimiento de categorias */
 
-.tracker{
+.tracker-backend{
   background-color: #ededed;
   color: #797979;
   font-size: 14px;
@@ -75,14 +75,14 @@
   left: 30.15%;
 }
 
-.tracker ul h1{
+.tracker-backend ul h1{
   float: left;
   margin-top: 1%;
   padding-left: 1.2%;
   font-size: 20px;
 }
 
-.tracker ul li {
+.tracker-backend ul li {
   padding-right: 2%;
   padding-left: 1%;
   padding-top: 1.5%;
@@ -96,7 +96,7 @@
 *   Cuerpo del punto de ventas   *
 *********************************/
 
-.salePoint{
+.salePoint-backend{
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -104,7 +104,7 @@
 
 /* Zona de interaccion con la orden */
 
-.sideBar{
+.sideBar-backend{
   width: 30%;
   height: 93%;
   top: 7%;
@@ -115,45 +115,45 @@
 
 /*  Comida de la orden  */
 
-.added{
+.added-backend{
   height: 65%;
 }
 
 /*  Comida de la orden  */
-.food-in-order{
+.food-in-order-backend{
   background: #d6d6d6;
   margin-top: 2%;
   color: #474747
 }
 
-.food-in-order{
+.food-in-order-backend{
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
-.food-in-order .info{
+.food-in-order-backend .info-backend{
   margin-left: 4%;
   margin-top: 1%;
 }
 
-.food-in-order h3{
+.food-in-order-backend h3{
   margin-left: 4%;
   margin-right: 40%;
 }
 
-.food-in-order h3, .food-in-order h4{
+.food-in-order-backend h3, .food-in-order-backend h4{
   font-size: 16px;
 }
 
-.food-in-order p{
+.food-in-order-backend p{
   font-size: 14px;
 }
 
-.food-in-order .price, .food-in-order .qty{
+.food-in-order-backend .price-backend, .food-in-order-backend .qty-backend{
   margin-left: 3%;
 }
 
-.food-in-order .remove-food{
+.food-in-order-backend .remove-food-backend{
   font-size: 1.2em;
   cursor: pointer;
   font-weight: bolder;
@@ -162,11 +162,11 @@
   color: #ec2a2a;
 }
 
-.food-in-order .remove-food:hover{
+.food-in-order-backend .remove-food-backend:hover{
   color: #ff3333;
 }
 
-.total{
+.total-backend{
   float: right;
   color: #474747;
   margin-top: 4%;
@@ -174,14 +174,14 @@
   margin-left: 6%;
 }
 
-.total h5{
+.total-backend h5{
   text-align: center;
   font-size: 1.4em;
   border-top: solid 2px #474747;
 }
 
 /*  Para ordenes vacias  */
-.empty{
+.empty-backend{
   text-align: center;
   color: #9d9d9d;
   font-size: 20px;
@@ -189,13 +189,13 @@
   margin-top: 30%;
 }
 
-.empty span{
+.empty-backend span{
   font-size: 4em;
 }
 
 /*  Teclado  */
 
-.orderTools{
+.orderTools-backend{
   position: fixed;
   background-color: #ededed;
   border-top: 2px solid #26f6b1;
@@ -204,7 +204,7 @@
   top: 65%;
 }
 
-.keyboard{
+.keyboard-backend{
   transition:All 300ms ease;
   -webkit-transition:All 300ms ease;
   -moz-transition:All 300ms ease;
@@ -216,7 +216,7 @@
   border-radius: 5px;
 }
 
-.keyboard .pay:hover, .keyboard .numeric tr th:hover{
+.keyboard-backend .pay-backend:hover, .keyboard-backend .numeric-backend tr th:hover{
   transition:All 300ms ease;
   -webkit-transition:All 300ms ease;
   -moz-transition:All 300ms ease;
@@ -226,50 +226,50 @@
 }
 
 /*  Pagar  */
-.pay{
+.pay-backend{
   border-right: 1px solid #dedede;
   width: 40%;
 }
 
-.pay .content{
+.pay-backend .content-backend{
   width: 100%;
   margin-top: 44%;
   text-align: center;
 }
-.pay span{
+.pay-backend span{
   padding: 10%;
   color: #dedede;
   font-size: 30px;
   background-color: #545454;
   border-radius: 50%;
 }
-.pay h4{
+.pay-backend h4{
   margin-top: 10%;
 }
 
 /*  Tecaldo numerico  */
-.numeric{
+.numeric-backend{
   width: 60%;
   height: 100%;
 }
 
-.numeric tr th{
+.numeric-backend tr th{
   width: 14%;
   margin: 0px;
   border-right: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
 
-.numeric .db{
+.numeric-backend .db-backend{
   border-bottom: none;
 }
 
-.numeric .dr{
+.numeric-backend .dr-backend{
   border-right: none;
 }
 
 /* Function selection*/
-.keyboard .selected{
+.keyboard-backend .selected-backend{
   transition:All 300ms ease;
   -webkit-transition:All 300ms ease;
   -moz-transition:All 300ms ease;
@@ -279,7 +279,7 @@
 
 /* Menu */
 
-.menu{
+.menu-backend{
   width: 70%;
   height: 86%;
   position: fixed;
@@ -287,11 +287,11 @@
   right: 0%;
 }
 
-.categories{
+.categories-backend{
   margin-top: 1%;
 }
 
-.categories .category, .foods .drink, .foods .dish{
+.categories-backend .category-backend, .foods-backend .drink-backend, .foods-backend .dish-backend{
   width: 20%;
   margin-left: 2%;
   background-color: #fff;
@@ -301,14 +301,14 @@
   cursor: pointer;
 }
 
-.menu h3, .menu h4{
+.menu-backend h3, .menu-backend h4{
   font-weight: lighter;
   font-size: 16px;
   color: #545454;
   margin-left: 4%;
 }
 
-.menu h5{
+.menu-backend h5{
   margin-bottom: 2%;
   margin-top: 1%;
   margin-right: 85%;
@@ -319,7 +319,7 @@
   font-size: 1.4em;
 }
 
-.foods p{
+.foods-backend p{
   float: right;
   margin-right: 1%;
   padding-right: 3%;
@@ -331,7 +331,7 @@
   border-radius: 2px;
 }
 
-.menu .photo{
+.menu-backend .photo-backend{
   width: 90%;
   margin-left: 5%;
   margin-top: 3%;

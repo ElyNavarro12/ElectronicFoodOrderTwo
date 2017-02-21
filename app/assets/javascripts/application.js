@@ -17,17 +17,17 @@
 
 $(document).ready(function(){
   if($('#notice').text().length < 1){
-    $('.notice').addClass('hidden');
+    $('.notice-backend').addClass('hidden-backend');
     //Close alert
     $('#closeAlertBox').click(function(){
-      $('.alertBox').addClass('hidden');
+      $('.alertBox-backend').addClass('hidden-backend');
     });
   }
   if($('#alert').text().length < 1){
-    $('.alert').addClass('hidden');
+    $('.alert-backend').addClass('hidden-backend');
     //Close alert
     $('#closeAlertBox').click(function(){
-      $('.alertBox').addClass('hidden');
+      $('.alertBox-backend').addClass('hidden-backend');
     });
   }
 });
