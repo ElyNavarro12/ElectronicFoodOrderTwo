@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20161106202338) do
 
   create_table "foods", force: :cascade do |t|
     t.integer  "identifier"
-    t.string   "type"
+    t.string   "iof"
     t.string   "name"
     t.integer  "quantity"
     t.decimal  "price"

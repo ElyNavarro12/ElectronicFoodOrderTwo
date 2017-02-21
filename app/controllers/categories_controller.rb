@@ -1,25 +1,25 @@
 class CategoriesController < ApplicationController
 
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_menus, only: [:new, :edit, :destroy, :update]
   before_action :authenticate_user!
+
+  def index
+    @categories = Category.all
+  end
 
   def show
   end
 
   def new
-    if $currentMenu.instance_of? Integer
-      $currentMenu = $currentMenu
-      @category = Menu.find($currentMenu).categories.new
-    else
-      @category = Category.new
-    end
+    @category = Category.new
   end
 
   def edit
   end
 
   def create
-    @category = Menu.find($currentMenu).categories.new(category_params)
+    @category = Category.new(category_params)
 
     respond_to do |format|
       if @category.save
@@ -47,7 +47,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     respond_to do |format|
-      format.html { redirect_to menu_path(Menu.find($currentMenu)), notice: 'Category was successfully destroyed.' }
+      format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -56,9 +56,16 @@ class CategoriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])
-      $currentCategory = @category.id
       @dishes = @category.dishes
       @drinks = @category.drinks
+    end
+
+    def set_menus
+      @menus = Array.new
+
+      Menu.all.each do |m|
+        @menus.push(m.id)
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

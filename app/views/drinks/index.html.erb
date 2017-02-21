@@ -1,0 +1,41 @@
+drink<%= render '/orders/header' %>
+<div class="mainBox">
+  <section>
+    <div class="title">
+      <h1>Showing the Drinks database</h1>
+    </div>
+    <div class="subtitle">
+      <p>In this section you can check and have acces to the Drinks</p>
+    </div>
+  </section>
+  <section class="article">
+    <div class="articlehead">
+      <h2>Listing al Drinks</h1>
+      </div>
+    </div>
+    <div clas="list">
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Precio</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @drinks.each do |drink| %>
+          <tr>
+            <td><%= drink.id %></td>
+            <td><%= drink.name %></td>
+            <td><%= drink.price %></td>
+            <td><%= link_to 'Show', drink %></td>
+            <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
+            <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Nueva bebida', new_drink_path() %>
+    </div>
+  </section>
+</div>

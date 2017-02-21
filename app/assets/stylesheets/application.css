@@ -33,6 +33,10 @@ body{
   display: none;
 }
 
+.mainBox{
+  padding-top: 3%;
+}
+
 /* notice and alert*/
 .alertBox{
   z-index: 999;
@@ -84,7 +88,6 @@ header{
 
 /*  Titulo  */
 .title h1{
-  margin-top: 6%;
   font-size: 24px;
 }
 

@@ -19,6 +19,10 @@
     <%= f.label :Imagen %>
     <%= f.file_field :photo %>
   </div>
+  <div class="field">
+    <%= f.label :Pertenece_a %>
+    <%= f.select(:menu_id, options_for_select(@menus)) %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

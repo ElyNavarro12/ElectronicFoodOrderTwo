@@ -11,12 +11,6 @@ class SalesController < ApplicationController
         :total => 0.0,
         :payed => false
       })
-      @food = Order.find(353).foods.create({
-      :identifier => 1,
-      :name => "Enchiladas",
-      :quantity => 1,
-      :price => 20,
-      :total => 20})
     end
 
     @orders = Order.where(payed: false).all

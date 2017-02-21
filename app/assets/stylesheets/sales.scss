@@ -153,6 +153,19 @@
   margin-left: 3%;
 }
 
+.food-in-order .remove-food{
+  font-size: 1.2em;
+  cursor: pointer;
+  font-weight: bolder;
+  position: absolute;
+  right: 3%;
+  color: #ec2a2a;
+}
+
+.food-in-order .remove-food:hover{
+  color: #ff3333;
+}
+
 .total{
   float: right;
   color: #474747;

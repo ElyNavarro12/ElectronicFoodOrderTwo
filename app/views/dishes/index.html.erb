@@ -1,0 +1,41 @@
+<%= render '/orders/header' %>
+<div class="mainBox">
+  <section>
+    <div class="title">
+      <h1>Showing the Dishes database</h1>
+    </div>
+    <div class="subtitle">
+      <p>In this section you can check and have acces to the Dishes</p>
+    </div>
+  </section>
+  <section class="article">
+    <div class="articlehead">
+      <h2>Listing al Dishes</h1>
+      </div>
+    </div>
+    <div clas="list">
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Precio</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @dishes.each do |dish| %>
+          <tr>
+            <td><%= dish.id %></td>
+            <td><%= dish.name %></td>
+            <td><%= dish.price %></td>
+            <td><%= link_to 'Show', dish %></td>
+            <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+            <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Nueva comida', new_dish_path() %>
+    </div>
+  </section>
+</div>

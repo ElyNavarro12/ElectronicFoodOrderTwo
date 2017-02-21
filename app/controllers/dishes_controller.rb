@@ -1,20 +1,25 @@
 class DishesController < ApplicationController
 
   before_action :set_dish, only: [:show, :edit, :update, :destroy]
+  before_action :set_categories, only: [:new, :edit, :destroy, :update]
   before_action :authenticate_user!
+
+  def index
+    @dishes = Dish.all
+  end
 
   def show
   end
 
   def new
-    @dish = Category.find($currentCategory).dishes.new
+    @dish = Dish.new
   end
 
   def edit
   end
 
   def create
-    @dish = Category.find($currentCategory).dishes.new(dish_params)
+    @dish = Dish.new(dish_params)
 
     respond_to do |format|
       if @dish.save
@@ -42,7 +47,7 @@ class DishesController < ApplicationController
   def destroy
     @dish.destroy
     respond_to do |format|
-      format.html { redirect_to category_path(Category.find($currentCategory)), notice: 'Dish was successfully destroyed.' }
+      format.html { redirect_to dishes_url, notice: 'Dish was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -51,6 +56,14 @@ class DishesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_dish
       @dish = Dish.find(params[:id])
+    end
+
+    def set_categories
+      @categories = Array.new
+
+      Category.all.each do |c|
+        @categories.push(c.id)
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

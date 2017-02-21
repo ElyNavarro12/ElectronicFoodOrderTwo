@@ -31,7 +31,7 @@ class FoodsController < ApplicationController
   def update
     respond_to do |format|
       if @food.update(food_params)
-        format.html { redirect_to @food, notice: 'Order was successfully updated.' }
+        format.html { redirect_to @food, notice: 'Food was successfully updated.' }
         format.json { render :show, status: :ok, location: @food }
       else
         format.html { render :edit }
@@ -50,12 +50,12 @@ class FoodsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_order
+    def set_food
       @food = Food.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_params
-      params.require(:food).permit(:identifier, :type, :name, :quantity, :price, :total, :order_id)
+      params.require(:food).permit(:identifier, :iof, :name, :quantity, :price, :total, :order_id)
     end
 end

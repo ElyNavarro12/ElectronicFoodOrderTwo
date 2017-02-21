@@ -1,9 +1,15 @@
 <section class="sideBar">
   <div class="added">
-    <% if @order.foods.length > 0 %>
-      <% @order.foods.each do |f| %>
-        <div class="foods-in-order">
-          <div class="food-in-order">
+    <% i = 0 %>
+    <% @orders.each do |order|%>
+      <% if order.foods.length > 0 %>
+        <% if i == 0 %>
+        <div class="not-empty <%= "in_#{order.id}" %>">
+        <% else %>
+        <div class="not-empty <%= "in_#{order.id} hidden" %>">
+        <% end %>
+        <% order.foods.each do |f| %>
+          <div class="food-in-order" id="food_<%= "#{f.id}" %>">
             <div class="head baseBox">
               <h3><%= "#{f.name}" %></h3>
               <h4>Total: <%= "#{f.total}" %></h4>
@@ -11,21 +17,35 @@
             <div class="info baseBox">
               <p class="price">Precio: <%= "#{f.price}" %></p>
               <p class="qty"><%= "#{f.quantity}" %> Pedido(s)</p>
-              <p></p>
+              <p class="remove-food" id="remove-food-<%= "#{f.id}" %>">x</p>
             </div>
           </div>
+        <% end %>
+          <div class="total">
+            <h5>Total: <%= "#{order.total}" %> </h5>
+          </div>
         </div>
+        <% if i == 0%>
+          <div class="empty hidden">
+            <div class="content">
+              <span class="icon-cart"></span>
+              <h3>La orden esta vacia</h3>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="not-empty <%= "in_#{order.id}" %> hidden">
+        </div>
+        <% if i == 0 %>
+          <div class="empty">
+            <div class="content">
+              <span class="icon-cart"></span>
+              <h3>La orden esta vacia</h3>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-      <div class="total">
-        <h5>Total: <%= "#{@order.total}" %> </h3>
-      </div>
-    <% else %>
-      <div class="empty">
-        <div class="content">
-          <span class="icon-cart"></span>
-          <h3>La orden esta vacia</h3>
-        </div>
-      </div>
+      <% i += 1%>
     <% end %>
   </div>
 

@@ -1,20 +1,25 @@
 class DrinksController < ApplicationController
 
   before_action :set_drink, only: [:show, :edit, :update, :destroy]
+  before_action :set_categories, only: [:new, :edit, :destroy, :update]
   before_action :authenticate_user!
+
+  def index
+    @drinks = Drink.all
+  end
 
   def show
   end
 
   def new
-    @drink = Category.find($currentCategory).drinks.new
+    @drink = Drink.new
   end
 
   def edit
   end
 
   def create
-    @drink = Category.find($currentCategory).drinks.new(drink_params)
+    @drink = Drink.new(drink_params)
 
     respond_to do |format|
       if @drink.save
@@ -42,7 +47,7 @@ class DrinksController < ApplicationController
   def destroy
     @drink.destroy
     respond_to do |format|
-      format.html { redirect_to category_path(Category.find($currentCategory)), notice: 'Drink was successfully destroyed.' }
+      format.html { redirect_to drinks_url, notice: 'Drink was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -51,6 +56,14 @@ class DrinksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_drink
       @drink = Drink.find(params[:id])
+    end
+
+    def set_categories
+      @categories = Array.new
+
+      Category.all.each do |c|
+        @categories.push(c.id)
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

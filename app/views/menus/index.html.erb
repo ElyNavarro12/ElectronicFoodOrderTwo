@@ -1,37 +1,39 @@
 <%= render '/orders/header' %>
-<section>
-  <div class="title">
-    <h1>Showing the menus database</h1>
-  </div>
-  <div class="subtitle">
-    <p>In this section you can check and have acces to the menus</p>
-  </div>
-</section>
-<section class="article">
-  <div class="articlehead">
-    <h2>Listing al Menus</h1>
+<div class="mainBox">
+  <section>
+    <div class="title">
+      <h1>Showing the menus database</h1>
     </div>
-  </div>
-  <div clas="list">
-    <table>
-      <thead>
-        <tr>
-          <td>ID</td>
-          <td>Name</td>
-        </tr>
-      </thead>
-      <tbody>
-        <% @menus.each do |menu| %>
-        <tr>
-          <td><%= menu.id %></td>
-          <td><%= menu.name %></td>
-          <td><%= link_to 'Show', menu %></td>
-          <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-          <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <%= link_to 'Nuevo menu', new_menu_path() %>
-  </div>
-</section>
+    <div class="subtitle">
+      <p>In this section you can check and have acces to the menus</p>
+    </div>
+  </section>
+  <section class="article">
+    <div class="articlehead">
+      <h2>Listing al Menus</h1>
+      </div>
+    </div>
+    <div clas="list">
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @menus.each do |menu| %>
+          <tr>
+            <td><%= menu.id %></td>
+            <td><%= menu.name %></td>
+            <td><%= link_to 'Show', menu %></td>
+            <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+            <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Nuevo menu', new_menu_path() %>
+    </div>
+  </section>
+</div>
