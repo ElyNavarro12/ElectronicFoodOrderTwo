@@ -1,29 +1,29 @@
 <% menu_tree = ["Menu"] %>
 
 <!-- Order selection !-->
-<section class="orderSelection baseBox">
-  <div class="selectOrder icon-plus" id="add">
+<section class="orderSelection-backend baseBox-backend">
+  <div class="selectOrder-backend icon-plus-backend" id="add">
   </div>
-  <div class="selectOrder icon-minus" id="delete">
+  <div class="selectOrder-backend icon-minus" id="delete">
   </div>
   <% i = 0 %>
   <% @orders.each do |order| %>
   <% i += 1 %>
     <% if i <= 1 %>
-    <div class="selectOrder baseBox currentOrder" id="order_<%= "#{order.id}" %>">
-      <p class="id"><%= "#{order.id}" %></p>
-      <p class="time"><%= "#{order.created_at.localtime.strftime("%H:%M")}" %></p>
+    <div class="selectOrder-backend baseBox-backend currentOrder-backend" id="order_<%= "#{order.id}" %>">
+      <p class="id-backend"><%= "#{order.id}" %></p>
+      <p class="time-backend"><%= "#{order.created_at.localtime.strftime("%H:%M")}" %></p>
     </div>
     <% else %>
-    <div class="selectOrder baseBox" id="order_<%= "#{order.id}" %>">
-      <p class="id"><%= "#{order.id}" %></p>
+    <div class="selectOrder-backend baseBox-backend" id="order_<%= "#{order.id}" %>">
+      <p class="id-backend"><%= "#{order.id}" %></p>
     </div>
     <% end %>
   <% end %>
 </section>
 
 <%# Seguimiento de categorias dentro del menu #%>
-<section class="tracker">
+<section class="tracker-backend">
   <ul id="branch">
     <% menu_tree.each do |branch| %>
       <% if branch == "Menu"%>

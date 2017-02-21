@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Nombre %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Precio %><br>
     <%= f.number_field :price %>
   </div>
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Descripcion %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Imagen %>
     <%= f.file_field :photo %>
   </div>
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Pertenece_a %>
     <%= f.select(:category_id, options_for_select(@categories)) %>
   </div>
 
-  <div class="actions">
+  <div class="actions-backend">
     <%= f.submit %>
   </div>
 <% end %>

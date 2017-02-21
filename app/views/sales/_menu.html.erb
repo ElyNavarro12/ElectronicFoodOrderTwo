@@ -1,11 +1,11 @@
-<section class="menu">
+<section class="menu-backend">
 
   <!-- Itermaos toodas las getegorias y platillos que hay dentoro de nuestra variable @menu !-->
-  <div class="baseBox categories">
+  <div class="baseBox-backend categories-backend">
   <% @menu.categories.each do |category| %>
 
-    <div class="category" id="category_<%= "#{category.id}" %>">
-      <%= image_tag category.photo.url(:medium), :class => "photo" %>
+    <div class="category-backend" id="category_<%= "#{category.id}" %>">
+      <%= image_tag category.photo.url(:medium), :class => "photo-backend" %>
       <h3><%= category.name %></h3>
     </div>
 
@@ -13,13 +13,13 @@
   </div>
 
   <% @menu.categories.each do |category| %>
-  <div class="baseBox foods hidden" id="category_id_<%= "#{category.id}" %>">
+  <div class="baseBox-backend foods-backend hidden-backend" id="category_id_<%= "#{category.id}" %>">
 
     <h5>Platillos</h5>
-    <div class="baseBox">
+    <div class="baseBox-backend">
       <% category.dishes.each do |dish| %>
-      <div class="dish food" id="dish_<%= "#{dish.id}" %>">
-        <%= image_tag dish.photo.url(:medium), :class => "photo" %>
+      <div class="dish-backend food-backend" id="dish_<%= "#{dish.id}" %>">
+        <%= image_tag dish.photo.url(:medium), :class => "photo-backend" %>
         <div>
           <p>$<%= dish.price %></p>
           <h4><%= dish.name %></h4>
@@ -29,10 +29,10 @@
     </div>
 
     <h5>Bebidas</h5>
-    <div class="baseBox">
+    <div class="baseBox-backend">
       <% category.drinks.each do |drink| %>
-      <div class="drink food" id="drink_<%= "#{drink.id}" %>">
-        <%= image_tag drink.photo.url(:medium), :class => "photo" %>
+      <div class="drink-backend food-backend" id="drink_<%= "#{drink.id}" %>">
+        <%= image_tag drink.photo.url(:medium), :class => "photo-backend" %>
         <div>
           <p>$<%= drink.price %></p>
           <h4><%= drink.name %></h4>

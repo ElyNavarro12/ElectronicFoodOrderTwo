@@ -1,44 +1,44 @@
-<section class="sideBar">
-  <div class="added">
+<section class="sideBar-backend">
+  <div class="added-backend">
     <% i = 0 %>
     <% @orders.each do |order|%>
       <% if order.foods.length > 0 %>
         <% if i == 0 %>
-        <div class="not-empty <%= "in_#{order.id}" %>">
+        <div class="not-empty-backend <%= "in_#{order.id}" %>-backend">
         <% else %>
-        <div class="not-empty <%= "in_#{order.id} hidden" %>">
+        <div class="not-empty-backend <%= "in_#{order.id}" %>-backend hidden-backend">
         <% end %>
         <% order.foods.each do |f| %>
-          <div class="food-in-order" id="food_<%= "#{f.id}" %>">
-            <div class="head baseBox">
+          <div class="food-in-order-backend" id="food_<%= "#{f.id}" %>">
+            <div class="head-backend baseBox-backend">
               <h3><%= "#{f.name}" %></h3>
               <h4>Total: <%= "#{f.total}" %></h4>
             </div>
-            <div class="info baseBox">
-              <p class="price">Precio: <%= "#{f.price}" %></p>
-              <p class="qty"><%= "#{f.quantity}" %> Pedido(s)</p>
-              <p class="remove-food" id="remove-food-<%= "#{f.id}" %>">x</p>
+            <div class="info-backend baseBox-backend">
+              <p class="price-backend">Precio: <%= "#{f.price}" %></p>
+              <p class="qty-backend"><%= "#{f.quantity}" %> Pedido(s)</p>
+              <p class="remove-food-backend" id="remove-food-<%= "#{f.id}" %>">x</p>
             </div>
           </div>
         <% end %>
-          <div class="total">
+          <div class="total-backend">
             <h5>Total: <%= "#{order.total}" %> </h5>
           </div>
         </div>
         <% if i == 0%>
-          <div class="empty hidden">
-            <div class="content">
+          <div class="empty-backend hidden-backend">
+            <div class="content-backend">
               <span class="icon-cart"></span>
               <h3>La orden esta vacia</h3>
             </div>
           </div>
         <% end %>
       <% else %>
-        <div class="not-empty <%= "in_#{order.id}" %> hidden">
+        <div class="not-empty-backend <%= "in_#{order.id}" %>-backend hidden-backend">
         </div>
         <% if i == 0 %>
-          <div class="empty">
-            <div class="content">
+          <div class="empty-backend">
+            <div class="content-backend">
               <span class="icon-cart"></span>
               <h3>La orden esta vacia</h3>
             </div>
@@ -50,42 +50,42 @@
   </div>
 
   <!-- Teclado de modificacion de la orden !-->
-  <div class="orderTools">
-    <div class="keyboard baseBox">
+  <div class="orderTools-backend">
+    <div class="keyboard-backend baseBox-backend">
 
       <!-- Opciones de pago !-->
-      <div class="pay" id="checkout">
-        <div class="content">
+      <div class="pay-backend" id="checkout">
+        <div class="content-backend">
           <span class="icon-svg"></span>
           <h4>Pagar</h4>
         </div>
       </div>
 
       <!-- Teclado numerico !-->
-      <table class="numeric">
+      <table class="numeric-backend">
         <tr>
           <th>9</th>
           <th>8</th>
           <th>7</th>
-          <th class="dr selected">Cant.</th>
+          <th class="dr-backend selected-backend">Cant.</th>
         </tr>
         <tr>
           <th>6</th>
           <th>5</th>
           <th>4</th>
-          <th class="dr">Desc.</th>
+          <th class="dr-backend">Desc.</th>
         </tr>
         <tr>
           <th>3</th>
           <th>2</th>
           <th>1</th>
-          <th class="dr">Precio</th>
+          <th class="dr-backend">Precio</th>
         </tr>
         <tr>
-          <th class="db">+/-</th>
-          <th class="db">0</th>
-          <th class="db">.</th>
-          <th class="db dr">x</th>
+          <th class="db-backend">+/-</th>
+          <th class="db-backend">0</th>
+          <th class="db-backend">.</th>
+          <th class="db-backend dr-backend">x</th>
         </tr>
       </table>
 

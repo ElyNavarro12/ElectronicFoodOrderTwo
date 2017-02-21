@@ -1,22 +1,22 @@
 <!-- Encabezado !-->
-<header class="baseBox">
+<header class="baseBox-backend">
 
   <!-- Titulo !-->
-  <div class="title baseBox">
-    <span class="icon icon-pacman"></span>
+  <div class="title-backend baseBox-backend">
+    <span class="icon-backend icon-pacman"></span>
     <h1>OutBess</h1>
   </div>
   <!-- Opciones de navegacion !-->
-  <div class="navBar baseBox">
+  <div class="navBar-backend baseBox-backend">
     <!-- Cerrar sesion actual !-->
-    <div class="sign_out baseBox">
-      <span class="icon icon-user"></span>
+    <div class="sign_out-backend baseBox-backend">
+      <span class="icon-backend icon-user-backend"></span>
       <% if user_signed_in? %>
         <%= link_to current_user.email, destroy_user_session_path, method: :delete  %>
       <% end %>
     </div>
     <!-- Navegacion !-->
-    <div class="navigation">
+    <div class="navigation-backend">
       <%= link_to '', '/config', :class => 'icon-menu' %>
     </div>
   </div>

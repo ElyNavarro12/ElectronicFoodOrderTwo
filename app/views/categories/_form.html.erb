@@ -11,20 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Nombre %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Imagen %>
     <%= f.file_field :photo %>
   </div>
-  <div class="field">
+  <div class="field-backend">
     <%= f.label :Pertenece_a %>
     <%= f.select(:menu_id, options_for_select(@menus)) %>
   </div>
 
-  <div class="actions">
+  <div class="actions-backend">
     <%= f.submit %>
   </div>
 <% end %>
