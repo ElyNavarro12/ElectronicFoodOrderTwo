@@ -33,7 +33,7 @@ function moveThroughMenu(){
           if (i.menu_id == item.id){
             $(document).on('click', '#category_'+i.id, function(event){
 
-              $('.categories').fadeOut(50);
+              $('.categories-backend').fadeOut(50);
               $('#category_id_'+i.id).fadeIn();
 
               //Agregamos el nombre de la categoria a la que se ingresa en nuestro 'tracker'
@@ -41,8 +41,8 @@ function moveThroughMenu(){
 
               //Damos la opcion al usuario de volve atras al hacer click en cualquier categoria en el siguimiento del tracker
               $(document).on('click', '#track', function(event){
-                $('.foods').fadeOut(50);
-                $('.categories').fadeIn();
+                $('.foods-backend').fadeOut(50);
+                $('.categories-backend').fadeIn();
                 $('#newBranch').remove();
               });
 
@@ -58,33 +58,33 @@ function moveThroughMenu(){
 //Creacion de nuevas ordenes
 function createOrder(){
   //Calculamos la orden actual
-  currentOrder = $('.currentOrder .id').text();
+  currentOrder = $('.currentOrder-backend .id-backend').text();
 
   $('#add').click(function(){
     //Creamos una nueva orden en nuestra base de datos
     fastPost('/orders',{order: {payed: false, total: 0.0}}, function(){});
 
     //Actualizamos la vista de nuestras ordenes
-    $('.time').remove();
-    $('.currentOrder').removeClass('currentOrder');
+    $('.time-backend').remove();
+    $('.currentOrder-backend').removeClass('currentOrder-backend');
 
     setTimeout(function(){
       //Actualizamos nuestra variable de ordenes
       fastGet('/orders', function(data, status){
         //Mostramos la nueva orden en pantalla y la marcamos como seleccionada
         last = data.length - 1;
-        $('.orderSelection').append(
-          '<div class="selectOrder baseBox currentOrder" id="order_'+data[last].id+'">'
-            +'<p class="id">'+ data[last].id +'</p><p class="time">'+ data[last].created_at.slice(11, 16) +'</p>'
+        $('.orderSelection-backend').append(
+          '<div class="selectOrder-backend baseBox-backend currentOrder-backend" id="order_'+data[last].id+'">'
+            +'<p class="id-backend">'+ data[last].id +'</p><p class="time-backend">'+ data[last].created_at.slice(11, 16) +'</p>'
           +'</div>'
         );
         //Cremos un campo en blanco donde iran las ordenes;
         $('.added').append(
-          '<div class="not-empty in_'+data[last].id+'">'
+          '<div class="not-empty in_'+data[last].id+'-backend">'
           +'</div>'
         );
-        $('.not-empty').addClass('hidden');
-        $('.empty').removeClass('hidden');
+        $('.not-empty-backend').addClass('hidden-backend');
+        $('.empty-backend').removeClass('hidden-backend');
       });//fastGet
     },50);//setTimeout
 
@@ -95,17 +95,17 @@ function createOrder(){
 function deleteOrder(){
   $(document).on("click", '#delete', function(event){
     //Calculamos currentOrder
-    currentOrder = $('.currentOrder .id').text();
+    currentOrder = $('.currentOrder-backend .id-backend').text();
 
     //Removemos la informacion de la orden actual que se esta mostrando
-    $('.time').remove();
-    $('.currentOrder').removeClass('currentOrder');
+    $('.time-backend').remove();
+    $('.currentOrder-backend').removeClass('currentOrder-backend');
     $('#order_'+currentOrder).remove();
-    $('.in_'+currentOrder).remove();
+    $('.in_'+currentOrder+'-backend').remove();
 
     //Eliminamos las comidas dentro de la orden actualmente seleccionada TODO Arreglar esta pinshi parte que no se porque no sirve :c
     fastGet('/foods', function(data, status){
-      findid = $('.currentOrder .id').text();
+      findid = $('.currentOrder-backend .id-backend').text();
       data.forEach(function(item, index){
         if (item.order_id == currentOrder) {
           fastDestroy('/foods', item.id, function(){});
@@ -119,8 +119,8 @@ function deleteOrder(){
     //Actualizamos la vista de la orden actual
     fastGet('/orders', function(data, status){
 
-      $('#order_'+ data[0].id).addClass('currentOrder');
-      $('.currentOrder').append('<p class="time">'+ data[0].created_at.slice(11, 16) +'</p>');
+      $('#order_'+ data[0].id).addClass('currentOrder-backend');
+      $('.currentOrder-backend').append('<p class="time-backend">'+ data[0].created_at.slice(11, 16) +'</p>');
 
       //Actualizamos la info de los alimentos dentro de la orden
       fastGet('/foods', function(f, s){
@@ -131,18 +131,18 @@ function deleteOrder(){
           }
         });
         if (isEmpty) {
-          $('.not-empty').addClass('hidden');
-          $('.empty').removeClass('hidden');
+          $('.not-empty-backend').addClass('hidden-backend');
+          $('.empty-backend').removeClass('hidden-backend');
         } else {
-          $('.not-empty').addClass('hidden');
-          $('.empty').addClass('hidden');
-          $('.in_'+data[0].id).removeClass('hidden');
+          $('.not-empty-backend').addClass('hidden-backend');
+          $('.empty-backend').addClass('hidden-backend');
+          $('.in_'+data[0].id+'-backend').removeClass('hidden-backend');
         }
       });
 
     });
     //Reecalculamos la id actual
-    currentOrder = $('.currentOrder .id').text();
+    currentOrder = $('.currentOrder-backend .id-backend').text();
   });
 }
 
@@ -150,21 +150,21 @@ function deleteOrder(){
 function selectOrder(){
 
   //Marcamos como seleccionado la orden clickeada
-  $(document).on("click", '.selectOrder',function(event){
+  $(document).on("click", '.selectOrder-backend',function(event){
     clickedId = event.currentTarget.id;
 
     if (clickedId.slice(0,5) == 'order') {
 
       //removemos la clase seleccionada
-      $('.time').remove();
-      $('.currentOrder').removeClass('currentOrder');
+      $('.time-backend').remove();
+      $('.currentOrder-backend').removeClass('currentOrder-backend');
 
       fastGet('/orders', function(data, status){
 
         data.forEach(function(item, index){
           if (item.id == clickedId.slice(6)) {
-            $('#'+clickedId).append('<p class="time">'+ data[index].created_at.slice(11, 16) +'</p>');
-            $('#'+clickedId).addClass('currentOrder');
+            $('#'+clickedId).append('<p class="time-backend">'+ data[index].created_at.slice(11, 16) +'</p>');
+            $('#'+clickedId).addClass('currentOrder-backend');
 
             //Actualizamos la info de los alimentos dentro de la orden
             fastGet('/foods', function(f, s){
@@ -175,12 +175,12 @@ function selectOrder(){
                 }
               });
               if (isEmpty) {
-                $('.not-empty').addClass('hidden');
-                $('.empty').removeClass('hidden');
+                $('.not-empty-backend').addClass('hidden-backend');
+                $('.empty-backend').removeClass('hidden-backend');
               } else {
-                $('.not-empty').addClass('hidden');
-                $('.empty').addClass('hidden');
-                $('.in_'+data[index].id).removeClass('hidden');
+                $('.not-empty-backend').addClass('hidden-backend');
+                $('.empty-backend').addClass('hidden-backend');
+                $('.in_'+data[index].id+'-backend').removeClass('hidden-backend');
               }
             });
 
@@ -194,7 +194,7 @@ function selectOrder(){
 
 
   //Calculamos la orden actual
-  currentOrder = $('.currentOrder .id').text();
+  currentOrder = $('.currentOrder-backend .id-backend').text();
 
 }
 
@@ -202,20 +202,20 @@ function selectOrder(){
 function addToOrder(){
 
   //Creamos un eventListener para cualquier tipo de comida
-  $(document).on("click", '.food', function(event){
+  $(document).on("click", '.food-backend', function(event){
     //Informacion requerida del evento
     updated = false;
     foodType = event.currentTarget.id.slice(0, event.currentTarget.id.indexOf("_"));
     foodId = event.currentTarget.id.slice(event.currentTarget.id.indexOf("_")+1);
-    currentOrder = $('.currentOrder .id').text();
+    currentOrder = $('.currentOrder-backend .id-backend').text();
     foodUrl = '';
     if(foodType == 'dish'){
       foodUrl = '/dishes';
     }else if (foodType == 'drink') {
       foodUrl = '/drinks';
     }
-    $('.empty').addClass('hidden');
-    $('.in_'+currentOrder).removeClass('hidden');
+    $('.empty-backend').addClass('hidden-backend');
+    $('.in_'+currentOrder+'-backend').removeClass('hidden-backend');
 
     //Buscamos
     fastGet(foodUrl+'/'+foodId, function(data, status){
@@ -263,20 +263,20 @@ function addToOrder(){
         data.forEach(function(item, index){
           if (item.order_id == currentOrder && item.identifier == foodId && item.iof == foodType) {
             if (updated) {
-              $('#food_'+item.id+' .head h4').text('Total: '+item.total);
-              $('#food_'+item.id+' .info .price').text('Precio: '+item.price);
-              $('#food_'+item.id+' .info .qty').text(item.quantity+' Pedido(s)');
+              $('#food_'+item.id+' .head-backend h4-backend').text('Total: '+item.total);
+              $('#food_'+item.id+' .info-backend .price-backend').text('Precio: '+item.price);
+              $('#food_'+item.id+' .info-backend .qty-backend').text(item.quantity+' Pedido(s)');
             } else {
               $('.in_'+currentOrder).append(
-                '<div class="food-in-order" id="food_'+item.id+'">'
-                  +'<div class="head baseBox">'
+                '<div class="food-in-order-backend" id="food_'+item.id+'">'
+                  +'<div class="head-backend baseBox-backend">'
                     +'<h3>'+item.name+'</h3>'
                     +'<h4>Total: '+item.total+'</h4>'
                   +'</div>'
-                  +'<div class="info baseBox">'
-                    +'<p class="price">Precio: '+item.price+'</p>'
-                    +'<p class="qty">'+item.quantity+' Pedido(s)</p>'
-                    +'<p class="remove-food" id="remove-food-'+item.id+'">x</p>'
+                  +'<div class="info-backend baseBox-backend">'
+                    +'<p class="price-backend">Precio: '+item.price+'</p>'
+                    +'<p class="qty-backend">'+item.quantity+' Pedido(s)</p>'
+                    +'<p class="remove-food-backend" id="remove-food-'+item.id+'">x</p>'
                   +'</div>'
                 +'</div>'
               );
@@ -290,9 +290,9 @@ function addToOrder(){
         setTimeout(function(){
           data.forEach(function(item, idnex){
             if (item.id == currentOrder) {
-              $('.in_'+currentOrder+' .total').remove();
+              $('.in_'+currentOrder+'-backend .total-backend').remove();
               $('.in_'+currentOrder).append(
-                '<div class="total">'
+                '<div class="total-backend">'
                   +'<h5>Total: '+item.total+'</h5>'
                 +'</div>'
               );
@@ -311,7 +311,7 @@ function addToOrder(){
 function removeFromOrder(){
 
   //Iniciamos un listener de click
-  $(document).on('click', '.remove-food', function(event){
+  $(document).on('click', '.remove-food-backend', function(event){
     //Informacion necesaria obtenida del evento
     foodId = event.currentTarget.id.slice(12);
 
@@ -335,10 +335,10 @@ function removeFromOrder(){
       fastGet('/orders', function(data, status){
         data.forEach(function(item, idnex){
           if (item.id == currentOrder) {
-            $('.in_'+currentOrder+' .total h5').text('Total: '+item.total);
+            $('.in_'+currentOrder+'-backend .total-backend h5').text('Total: '+item.total);
             if (item.total == 0){
-              $('.not-empty').addClass('hidden');
-              $('.empty').removeClass('hidden');
+              $('.not-empty-backend').addClass('hidden-backend');
+              $('.empty-backend').removeClass('hidden-backend');
             }
           }//if
         });//foreach
