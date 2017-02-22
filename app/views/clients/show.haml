@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+%html{class:"no-js", lang: "es"}
+%head
+	%meta{:charset => "UTF-8"}/
+	%meta{name:"description", content:"OutBess, la mejor tecnología para ordenar"}
+	%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+	%script{src:"../js/vendor/modernizr-2.8.3.min.js"}
+	%link{:rel => "stylesheet", :href => "../css/normalize.css"}
+	%link{:rel => "stylesheet", :href => "../css/bootstrap.css"}
+	%link{:rel => "stylesheet", :href => "https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Open+Sans:400,600"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Roboto:400,500,700"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Dancing+Script"}
+	%link{:rel => "stylesheet", :href => "../css/style.css"}
+	%title OutBess Breakfast
+%body
+
+	=render 'clientNavBar'
+
+	/ Encabezado de la categoria
+	.row.full-width.remove-margin.center-xs
+		.col-xs-12.remove-padding
+			.div
+				%img.flag02.padding-top{:src => "#{asset_path 'clients/flag02_inv.png'}", :alt => ""}
+
+	.row.full-width.remove-margin.center-xs
+		.col-xs-11.remove-padding.special-menu#special-menu{style: "background-image: url(#{asset_path 'clients/f1.jpeg'});"}
+			.div.padding-top.white
+				%h2.title.remove-margin.medium-letter-spacing.responsive-title#special-menu-padding DESAYUNOS
+				%h3.dancing-script.remove-margin.small-padding.small-letter-spacing.padding-bottom Pollo a la parrilla
+				%p.roboto.white.medium.remove-margin.large-padding.small-letter-spacing.flag{style: "background-image: url(#{asset_path 'clients/flag01.png'});"} ESPECIAL DE DESAYUNO
+
+	.row.full-width.remove-margin.center-xs
+		.col-xs-12.remove-paddin
+			.div
+				%img.flag02.padding-bottom{:src => "#{asset_path 'clients/flag02.png'}", :alt => ""}/
+
+	/ Platillos
+	-plate= 0
+	.row.full-width.remove-margin#padding-bottom
+		-@category.dishes.each do |dish|
+			.col-md-4.col-lg-3.col-sm-6.col-xs-12.medium-padding
+				.div.category_img{style: "background-image: url(#{dish.photo.url(:medium)})"}
+				.div.black.pointer#plate{:id => "#{plate}"}
+					%h4.food.white.center-text.roboto.padding-left.small-letter-spacing#padding-top-food= dish[:name]
+					-plate+=1
+		-@category.drinks.each do |drink|
+			.col-md-4.col-lg-3.col-sm-6.col-xs-12.medium-padding
+				.div.category_img{style: "background-image: url(#{drink.photo.url(:medium)})"}
+				.div.black.pointer#plate{:id => "#{plate}"}
+					%h4.food.white.center-text.roboto.padding-left.small-letter-spacing#padding-top-food= drink[:name]
+					-plate+=1
+
+	/ Descripción para cada platillo
+	-index= 0
+	/Platillos
+	-@category.dishes.each do |dish|
+		.row.full-height.remove-margin.center-lg.plate#id{:id => "#{index}"}
+			.col-lg-11.col-xs-12.remove-padding.food-order{style: "background-color: rgba(0, 0, 0, 0.90)"}
+				.row.full-width.remove-margin.end-xs
+					.col-xs-12
+						%i.glyphicon.white.subtittle.glyphicon-remove#close{:id => "#{index}"}
+				.row.full-width.full-height.remove-margin
+					.col-lg-6.col-sm-6.col-xs-12#food-order
+						/ Imagen del platillo
+						.food-image{style: "background-image: url(#{dish.photo.url(:medium)})"}
+						/ Precio del platillo
+						.food-pricing#padding-top
+							%p.open-sans.center-text.white PRECIO: $#{dish[:price]}
+
+					.col-lg-6.col-sm-6.col-xs-12
+						/ Boton ORDENAR
+						.order-button
+							%i.glyphicon.glyphicon-log-in.medium
+							%p.open-sans.medium.center-text.remove-margin#order-button ORDENAR
+						/ Nombre del platillo
+						.food-name
+							%h3.center-text.white.medium-letter-spacing#food-name #{dish[:name]}
+						/ Descripción del platillo
+						.food-description
+							%p.white.open-sans#padding-top #{dish[:description]}
+							-index+=1
+	-@category.drinks.each do |drink|
+		.row.full-height.remove-margin.center-lg.plate#id{:id => "#{index}"}
+			.col-lg-11.col-xs-12.remove-padding.food-order{style: "background-color: rgba(0, 0, 0, 0.90)"}
+				.row.full-width.remove-margin.end-xs
+					.col-xs-12
+						%i.glyphicon.white.subtittle.glyphicon-remove#close{:id => "#{index}"}
+				.row.full-width.full-height.remove-margin
+					.col-lg-6.col-sm-6.col-xs-12#food-order
+						/ Imagen del platillo
+						.food-image{style: "background-image: url(#{drink.photo.url(:medium)})"}
+						/ Precio del platillo
+						.food-pricing#padding-top
+							%p.open-sans.center-text.white PRECIO: $#{drink[:price]}
+
+					.col-lg-6.col-sm-6.col-xs-12
+						/ Boton ORDENAR
+						.order-button
+							%i.glyphicon.glyphicon-log-in.medium
+							%p.open-sans.medium.center-text.remove-margin#order-button ORDENAR
+						/ Nombre del platillo
+						.food-name
+							%h3.center-text.white.medium-letter-spacing#food-name #{drink[:name]}
+						/ Descripción del platillo
+						.food-description
+							%p.white.open-sans#padding-top #{drink[:description]}
+						-index+=1
+
+	=render 'clientOrder'
+
+	/ JQUERY and JavaScript
+	%script{src:"https://code.jquery.com/jquery-3.1.0.min.js",integrity:"sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin:"anonymous"}
+	%script
+		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
+	%script{src:"../js/main.js"}

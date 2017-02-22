@@ -1,0 +1,739 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+//Ajustes al html y al body para que su height abarque el 100% de la pagina
+html, body {
+    height: 100%;
+}
+
+.image-container {
+    //Propiedad para volver al div que contiene la imagen su height 100%
+    height: 100%;
+
+}
+//Clase background cuyo proposito es acomodar la imagen lo mejor posible con el tamaño que tiene
+.background{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    background-repeat: no-repeat;
+}
+//Clase header que contiene la barra de navegacion
+.header{
+    padding-bottom: 100px;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+//Clase navigation que modifica todos los elementos li de la lista, asi como tambien todos los elementos a
+.navigation{
+    li{
+        @extend .title-text;
+        padding: 5px 10px;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        transition: all 0.4s;
+        &:hover{
+            a{
+                @extend .black
+            }
+            background-color: rgba(255,255,255,0.8);
+        }
+        a{
+            @extend .white;
+            &:hover{
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+.nav-background{
+    width: 100%;
+    height: 11%;
+    padding-bottom: 0em;
+    background-color: rgba(151, 35, 37, 0.80);
+    z-index: 5;
+}
+.flag{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.flag02{
+    width: 2.5em;
+}
+.logo{
+    width: 270px;
+    height: 65px;
+    padding-left: 3em;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+.category_img{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    overflow: hidden;
+}
+.ctg_img_bckgr{
+    margin-top: 15em;
+    padding-bottom: 2.1em;
+    background-color: RGBA(231, 207, 69, 1.00);
+}
+.food{
+    margin-top: 10px;
+    background-size: 100%;
+    background-image: url(<%= asset_path 'clients/flag01_sm.png'%>);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+    padding-bottom: 10px;
+    &:hover{
+        text-decoration: none;
+    }
+
+}
+.special-menu{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+}
+.food-order{
+    height: 100%;
+}
+.order-button{
+    margin-top: 0px;
+    i{
+        top: 29px;
+        right: 70px;
+    }
+}
+.food-image{
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.food-name{
+    margin-top: 30px;
+}
+.food-description{
+    margin: 0px 25px;
+}
+.food-ingredients{
+    padding-top: 10px;
+    margin: 0px 120px;
+}
+.ingredient-background{
+    background-color: RGBA(255, 235, 80, 1.00);
+}
+.plate{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    //bottom: -100%;
+}
+.order-text{
+    border: solid #FFEB50;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10em;
+    padding-left: 5px;
+}
+.order-price{
+    background-color: #FFEB50;
+    padding:7px 5px;
+}
+.order-image{
+    margin-left: 2.5em;
+    width: 80%;
+    height: 80%;
+    background-size: 100%;
+    background-image: url(<%= asset_path 'clients/order.png' %>);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.screen{
+    top: -100%;
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+    width: 100%;
+    transition: top 0.6s;
+}
+/* ID'S */
+#food-ingredient{
+    padding: 5px 0px;
+    background-size: 100%;
+}
+#food-name{
+    background-size: 100%;
+    padding-top: 20px;
+}
+#food-order{
+    padding: 0px 40px;
+}
+#order-button{
+    border-radius: 3px;
+    background-color: RGBA(255, 235, 80, 1.00);
+    margin: 0px 8em;
+}
+#responsive-icon{
+    display: none;
+}
+#padding-top{
+    padding-top: 15px;
+}
+#padding-top-food{
+    padding-top: 10px;
+}
+#padding-bottom{
+    padding-bottom: 5em;
+}
+#flag02{
+    padding: 16px 0px;
+    background-size: 27em 3em;
+}
+#special-menu{
+    height: 40em;
+}
+#special-menu-padding{
+    padding-top: 1.5em;
+}
+#gallery{
+
+}
+#contact-text{
+    padding-left: 10%;
+    p{
+        margin: 0;
+    }
+}
+#leave-message{
+    margin-top: 3em;
+    padding: 10px 10px;
+    border: RGBA(210, 188, 62, 1.00) 2px solid;
+}
+#order{
+    background-color: RGBA(255, 235, 80, 1.00);
+    &:hover{
+        background-color: rgba(0,0,0,1.0);
+        color: RGBA(255, 235, 80, 1.00);
+    }
+}
+#order_total{
+    margin-right: 10em;
+}
+#send_button{
+    background-color: #BE1522;
+    padding: 2px 20px;
+    margin-right: 20em;
+    border-radius: 7px;
+    p{
+        padding-top: 8px;
+    }
+}
+#order_page{
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+//Clases de estilos de texto
+.open-sans{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.roboto-bold{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.dancing-script{
+    font-family: 'Dancing Script', cursive;
+}
+.title{
+    font-size: 5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.title-text{
+    font-size: 1em;
+}
+.center-text{
+    text-align: center;
+}
+.left-text{
+    text-align: left;
+}
+.right-text{
+    text-align: right;
+}
+.white{
+    color: white;
+}
+.black{
+    color: rgb(0,0,0);
+}
+.yellow{
+    color: RGBA(210, 188, 62, 1.00);
+}
+.gray{
+    color: RGBA(168, 168, 168, 1.00);
+}
+.subtittle{
+    font-size: 2.5em;
+}
+.medium{
+    font-size: 1.5em;
+}
+.small{
+    font-size: 0.8em;
+}
+.medium-letter-spacing{
+    letter-spacing: 7px;
+}
+.small-letter-spacing{
+    letter-spacing: 2px;
+}
+//Clases de emparejamiento
+.up{
+    z-index: 5;
+}
+.full-height{
+    height: 100%;
+}
+.full-width{
+    width: 100%;
+}
+.remove-margin{
+    margin: 0;
+}
+.remove-padding{
+    padding: 0;
+}
+.large-padding{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.medium-padding{
+    padding: 16px 12px;
+}
+.small-padding{
+    padding-bottom: 2em;
+}
+.padding-top{
+    padding-top: 75px;
+}
+.padding-left{
+    padding-left: 15px;
+}
+.padding-bottom{
+    padding-bottom: 5em;
+}
+.overflow{
+    overflow: hidden;
+}
+//Clases para posicionamiento
+.top{
+    top: 1.5em;
+}
+.right{
+    right: 10em;
+}
+.left{
+    left: 1em;
+}
+.bottom{
+    bottom: 0em;
+}
+.fixed{
+    position: fixed;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.z-index{
+    z-index: 100;
+}
+.inline{
+    display: inline-block;
+}
+
+/* Cursores */
+.pointer{
+    cursor: pointer;
+}
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+@media only screen and (max-width: 767px){
+    .order-image{
+        display: none !important;
+    }
+    .food-image{
+        height: 90%;
+    }
+
+}
+@media only screen and (max-width: 420px){
+    .title{
+        font-size: 4em;
+    }
+}
+@media only screen and (max-width: 385px){
+    .logo{
+        width: 200px;
+        height: 60px;
+        padding-left: 0.5em;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    #order_total{
+        margin-right: 5em;
+    }
+}
+@media only screen and (max-width: 1178px){
+    #responsive-nav{
+        right: 20em;
+        ul{
+            position: fixed;
+            width: 100%;
+            font-size: 1.5em;
+            top: 70px;
+            right: 0px;
+            left: 5px;
+            text-align: center;
+            max-height: 0px;
+            overflow: hidden;
+            transition: all 0.4s;
+            background-color: rgba(151, 35, 37, 0.80);
+            &.active{
+                max-height: 80vh;
+            }
+            li{
+                display: block;
+                margin-top: 0em;
+                padding: 8px 10px;
+            }
+        }
+    }
+    #responsive-icon{
+        display: block;
+        left: 6em;
+    }
+    #categories{
+        padding-top: 5em;
+    }
+    #home{
+        padding-top: 0px;
+    }
+    #order-button{
+        background-color: RGBA(255, 235, 80, 1.00);
+        margin: 0px 4em;
+    }
+    #food-order{
+        padding: 0px 5px;
+    }
+    #contact-text{
+        padding-left: 5%;
+    }
+    #send_button{
+        margin-right: 0px;
+    }
+    .order-button{
+        i{
+            right: 0;
+            left: 95px;
+        }
+    }
+    .food-name{
+        margin: 0px 10px;
+    }
+    .food-description{
+        margin: 0px 10px;
+    }
+    .food-ingredients{
+        margin: 0px 60px;
+    }
+    .responsive-title{
+        font-size: 3.5em;
+    }
+    .order-text{
+        padding-right: 5em;
+    }
+}
+
+@media print,
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    p:first-line,
+    div:first-line,
+    blockquote:first-line,
+    li:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

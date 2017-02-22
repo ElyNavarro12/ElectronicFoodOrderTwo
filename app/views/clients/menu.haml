@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+%html{class:"no-js", lang: "es"}
+%head
+	%meta{:charset => "UTF-8"}/
+	%meta{name:"description", content:"OutBess, la mejor tecnología para ordenar"}
+	%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+	%script{src:"../js/vendor/modernizr-2.8.3.min.js"}
+	%link{:rel => "stylesheet", :href => "../css/normalize.css"}
+	%link{:rel => "stylesheet", :href => "../css/bootstrap.css"}
+	%link{:rel => "stylesheet", :href => "https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Open+Sans:400,600"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Roboto:400,500,700"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Dancing+Script"}
+	%link{:rel => "stylesheet", :href => "../css/style.css"}
+	%title OutBess Categories
+%body
+
+	=render 'clientNavBar'
+
+	/ Categorias
+	.row-full-width.remove-margin.center-xs
+		.col-xs-12.remove-padding
+			.box
+				%img.flag02.padding-top#categories{:src => "#{asset_path 'clients/flag02.png'}", :alt => ""}/
+	.row.full-width.full-height.remove-margin
+		.col-xs-12.remove-padding
+			.box
+				.row.full-width.remove-margin.center-xs
+					.col-xs-12.remove-padding
+						.box.black
+							%h2.subtittle.medium-letter-spacing.roboto-bold *CATEGORIAS*
+							%h3.dancing-script.remove-margin.small-letter-spacing.small-padding Disfruta de nuestra selección
+				.row.full-width.remove-margin#padding-bottom
+					-@menu.categories.each do |category|
+						.col-md-4.col-lg-3.col-sm-6.col-xs-12.medium-padding
+							.div.category_img{style: "background-image: url(#{category.photo.url(:medium)})"}
+								.div.ctg_img_bckgr.black.pointer{onclick: "location.href='../categorias/#{category[:id]}'"}
+									%h3.dancing-script.padding-left.small-letter-spacing#padding-top= category[:name]
+									%p.roboto.white.small.padding-left= category[:description]
+
+	=render 'clientOrder'
+
+	/ JQUERY and JavaScript
+	%script{src:"https://code.jquery.com/jquery-3.1.0.min.js",integrity:"sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin:"anonymous"}
+	%script
+		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
+	%script{src:"../js/main.js"}

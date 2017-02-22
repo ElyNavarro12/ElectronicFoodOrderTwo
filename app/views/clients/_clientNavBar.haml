@@ -1,0 +1,18 @@
+/ Se crea un hash para contener los titulos de la barra de navegacion
+-menu= [{name: "HOME", url:"/"},{name: "GALLERY", url:"#"},{name: "NEWS", url:"#"},{name: "MENU", url:"/menu"}, {name: "CONTACT", url:"/contacto"}, ]
+
+
+/ Barra de navegación
+.row.full-width.nav-background.fixed.remove-margin
+	.col-xs-12.remove-padding
+		=image_tag 'clients/ob1.png', class: 'logo', id: 'responsive-logo'
+		%nav.roboto.navigation.right.top.fixed#responsive-nav
+			%ul.list-inline
+				-menu.each do |item|
+					%li
+						%a{:href => "#{item[:url]}"}= item[:name]
+				%li#order
+					.div.pointer
+						%h4.remove-margin.roboto{style: "display: inline"} ORDENAR
+						%i.glyphicon.glyphicon-shopping-cart
+			%i.glyphicon.glyphicon-menu-hamburger.white.subtittle.glyphicon-remove#responsive-icon

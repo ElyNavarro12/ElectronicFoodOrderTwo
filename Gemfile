@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#Use haml for haml
+gem "haml-rails", "~> 0.9"
 # Use devise for sessions
 gem 'devise'
 # Use paperclip for uploading images

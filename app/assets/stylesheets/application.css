@@ -23,6 +23,8 @@
 
 body{
   background-color: #fafafa;
+  overflow-x: hidden;
+  margin-left: 0.5em;
 }
 
 .baseBox-backend{

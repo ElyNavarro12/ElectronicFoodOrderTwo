@@ -1,0 +1,82 @@
+/ Se crea un hash para contener los titulos de la barra de navegacion
+-menu= [{name: "HOME", url:"../index.html"},{name: "GALLERY", url:"#"},{name: "NEWS", url:"#"},{name: "MENU", url:"../categories/categories.html"}, {name: "CONTACT", url:"../contact/contact.html"}]
+
+<!DOCTYPE html>
+%html{class:"no-js", lang: "es"}
+%head
+	%meta{:charset => "UTF-8"}/
+	%meta{name:"description", content:"OutBess, la mejor tecnología para ordenar"}
+	%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+	%script{src:"../js/vendor/modernizr-2.8.3.min.js"}
+	%link{:rel => "stylesheet", :href => "../css/normalize.css"}
+	%link{:rel => "stylesheet", :href => "../css/bootstrap.css"}
+	%link{:rel => "stylesheet", :href => "https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Open+Sans:400,600"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Roboto:400,500,700"}
+	%link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Dancing+Script"}
+	%link{:rel => "stylesheet", :href => "../css/style.css"}
+	%title Contact
+%body
+
+	=render 'clientNavBar'
+
+	/ Fondo de la pagina
+	.row.full-width.remove-margin{style: "height: 80%"}
+		.col-xs-12.remove-padding
+			.background{style: "background-image: url(#{asset_path 'clients/Contact/1.jpg'})"}
+
+	/ Cuerpo de la pagina
+	.row.full-width.full-height.remove-margin
+		.col-xs-12.remove-padding
+			.row.full-width.remove-margin{style: "height: auto; background-color: rgb(0,0,0)"}
+				.col-sm-5.col-xs-12.remove-margin
+					.div.left-text#contact-text
+						.div.yellow.roboto.large-padding
+							%h3 SUCURSAL 1
+						.div.open-sans.gray
+							%p.inline 341 879 2587  &nbsp;|
+							%a.yellow{:href => ""}Envianos un email
+							%p Morelos #35 Col. Centro (Entre avenidas Ruiz y Colón)
+							%p Ciudad Guzmán, Jal 41300
+							%p restaurante_sensual@gmail.com
+						.div.yellow.roboto.large-padding
+							%h4 HORARIOS
+						.div.gray.open-sans
+							%p.white Desayuno:
+							%p Lunes - Domingo de 5:30 am - 3:30 pm
+							%p.white Comida:
+							%p Lunes - Domingo de 12:00 pm - 8:30 pm
+							%p.white Cena:
+							%p Lunes - Domingo de 6:30 pm - 2:30 pm
+							%p.white Bar:
+							%p Lunes - Domingo de 6:30 pm - 4:30 pm
+						.div.yellow.roboto.large-padding
+							%h4 REQUERIMIENTOS
+						.div.gray.open-sans
+							%p De preferencia, vestir formalmente
+						.div.yellow.roboto.large-padding
+							%h4 TARJETAS DE CREDITO
+						.div.gray.open-sans
+							%p American Express, MasterCard, VISA
+
+				.col-sm-6.col-xs-12
+					.div.left-text#contact-text
+						.div.yellow.roboto.large-padding{style: "padding-top: 20px"}
+							%h4 PARQUIMETRO
+						.div.gray.open-sans
+							%p El restaurante cuenta con estacionamiento propio, la empresa se hace responsable de cualquier percance en nuestros estacionamientos.
+						.div.yellow.roboto.large-padding
+							%h4 EVENTOS PRIVADOS
+						.div.gray.open-sans
+							%p En caso de querer reservar el restaurante, bar o zona VIP para eventos privados, favor de contactarse con nosotros por medio de nuestro número telefónico, correo electrónico o alguna otra de nuestras redes sociales.
+						.div.yellow.center-text#leave-message
+							%p DEJANOS UN MENSAJE
+				.col-md-1.col-sm-1.col-xs-4
+
+	=render 'clientOrder'
+
+	/ JQUERY and JavaScript
+	%script{src:"https://code.jquery.com/jquery-3.1.0.min.js",integrity:"sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin:"anonymous"}
+	%script
+		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
+	%script{src:"../js/main.js"}

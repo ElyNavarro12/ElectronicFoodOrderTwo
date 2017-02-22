@@ -1,30 +1,36 @@
-<%= form_for @category, html: { multipart: true } do |f| %>
-  <% if @category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this menu from being saved:</h2>
+<div class="mainBox-backend">
+  <%= form_for @category, html: { multipart: true } do |f| %>
+    <% if @category.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@category.errors.count, "error") %> prohibited this menu from being saved:</h2>
 
-      <ul>
-      <% @category.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field-backend">
+      <%= f.label :Nombre %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field-backend">
+      <%= f.label :Descripcion %>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field-backend">
+      <%= f.label :Imagen %>
+      <%= f.file_field :photo %>
+    </div>
+    <div class="field-backend">
+      <%= f.label :Pertenece_a %>
+      <%= f.select(:menu_id, options_for_select(@menus)) %>
+    </div>
+
+    <div class="actions-backend">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field-backend">
-    <%= f.label :Nombre %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field-backend">
-    <%= f.label :Imagen %>
-    <%= f.file_field :photo %>
-  </div>
-  <div class="field-backend">
-    <%= f.label :Pertenece_a %>
-    <%= f.select(:menu_id, options_for_select(@menus)) %>
-  </div>
-
-  <div class="actions-backend">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

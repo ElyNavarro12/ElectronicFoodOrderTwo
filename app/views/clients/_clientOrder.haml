@@ -1,0 +1,23 @@
+/ Hash para las ordenes a pagar
+-menu_orders= [{name: "Enchiladas01", price: 100}, {name: "Enchiladas02", price: 100}, {name: "Enchiladas03", price: 100}, {name: "Enchiladas04", price: 100}, {name: "Enchiladas05", price: 100}]
+
+
+/Seccion Ordenar
+-index= 0
+.row.full-width.full-height.remove-margin.end-xs#order_page
+  .col-xs-12.remove-padding
+    %i.glyphicon.black.subtittle.glyphicon-remove#close
+    .row.full-width.full-height.remove-margin.start-xs
+      .col-lg-6.col-md-6.col-sm-6.col-xs-0.remove-padding
+        .order-image
+      .col-lg-6.col-md-6.col-sm-6.col-xs-12
+        %p.subtittle.roboto-bold.black.left-text TU ORDEN
+        -menu_orders.each do |order|
+          %p.order-text.open-sans.black.medium.inline= order[:name]
+          %p.order-price.open-sans.black.medium.inline $#{order[:price]}
+          -index+=order[:price]
+        .div.medium.roboto.black
+          %p.roboto-bold.inline#order_total TOTAL:
+          %p.inline.white{style: "background-color: black"} $#{index}.00
+        #send_button
+          %p.medium.roboto-black.white.center-text ENVIAR ORDEN

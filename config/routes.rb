@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  #Rustas para la seccion publica
+  get '/categorias/:id' => 'clients#show'
+  get '/contacto' => 'clients#contacto'
+  get '/menu' => 'clients#menu'
+
+  #Rustas para la seccion administrativa
+  get '/ventas' => 'sales#index'
+
   #Rutas para poder utilizar CRUD con los modelos Menu y Category
   resources :menus
   resources :categories
@@ -11,9 +19,8 @@ Rails.application.routes.draw do
   resources :orders
   resources :foods
 
-
   # You can have the root of your site routed with "root"
-  root 'sales#index'
+  root 'clients#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
